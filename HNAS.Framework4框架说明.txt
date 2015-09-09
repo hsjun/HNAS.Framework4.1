@@ -1,0 +1,94 @@
+HNAS.Framework4框架说明
+
+HNAS.Framework4框架功能 基于微软企业库5.0.414.0源码基础上扩展
+
+Microsoft.Practices.EnterpriseLibrary版本
+版本 5.0.414.0 (标准版)
+版本 5.0.505.0 (update1)
+
+各模块说明
+
+1.HNAS.Framework4.Caching WEB缓存模块
+模块没有与企业库关联
+
+----HNAS.Framework4.Caching （非企业库内容）
+CacheDep  (System.Web.Caching.SqlCacheDependency 类)
+SqlCacheDep : CacheDep
+
+2.HNAS.Framework4.Security.Cryptography 安全加密
+模块没有与企业库关联
+
+----HNAS.Framework4.Security.Cryptography  （企业库不支持非对称加密）
+BigInteger
+RSACryption
+RSAEncrypt
+ServiceBase
+ServiceBase.resx
+UsernameToken
+
+3.HNAS.Framework4.BLBase
+引用企业库模块 EnterpriseLibrary.ExceptionHandling
+
+--HNAS.Framework4.BLBase
+CallResult
+CommonBL
+Message
+
+4.HNAS.Framework4.Data
+引用企业库模块 EnterpriseLibrary.Data
+
+----HNAS.Framework4.Data
+CommonDA    : DABase
+DAbase
+DataAccess
+Pager
+
+5.HNAS.Framework4.Logging
+引用企业库模块EnterpriseLibrary.Logging
+
+----HNAS.Framework4.Logging
+CodeCommon
+WriteLogToDB
+WriteType
+
+6.HNAS.Framework4.Security
+模块没有与企业库关联
+
+----HNAS.Framework4.Security
+InputFilter
+IPLocator
+LdapAuthentication
+SiteSecurity
+FormsAuth
+
+7.HNAS.Framework4.Validation  (EmailValidator没有存在必要)
+引用企业库模块EnterpriseLibrary.Validation
+
+----HNAS.Framework4.Validation.Validators
+--Validation\Validation\Validators
+BaseClass  (实体基类)
+EmailValidator
+EmailValidatorAttribute
+
+--Validation\Validation\Configuration
+EmailValidatorData
+DesignResources （EmailValidator资源文件）
+
+--Validation\Validation.Properties
+Resources （EmailValidator资源文件）
+
+8.HNAS.Framework4.WebCommon
+模块没有与企业库关联
+
+----HNAS.Framework4.WebCommon  （非企业库内容）
+AlertMsn
+ArgumentAssertion
+ChineseNum
+CookieExtension
+EscapeString
+Function
+GenericTemplateControl
+GridViewPager
+UIBase
+Validation
+XmlHelper

@@ -1,0 +1,70 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+/*.suo
+/Caching.csproj.user
+/DataAccess/BLBase/BLBase.csproj.user
+/DataAccess/Data/Data.csproj.user
+/DataAccess/Data/Data.csproj.user
+/Logging/Logging.csproj.user
+/DataAccess/Data/Data.csproj.user
+/Security/Security.csproj.user
+/Security.Cryptography/Security.Cryptography.csproj.user
+/Validation/Validation.csproj.user
+/WebCommon/WebCommon.csproj.user
+/Caching/obj
+/Caching/bin
+/DataAccess/BLBase/obj
+/DataAccess/BLBase/bin
+/DataAccess/Data/obj
+/DataAccess/Data/bin
+/Logging/obj
+/Logging/bin
+/Security/bin
+/Security/obj
+/Security.Cryptography/obj
+/Security.Cryptography/bin
+/Validation/obj
+/Validation/bin
+/WebCommon/obj
+/WebCommon/bin

@@ -1,0 +1,111 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Access Application Block", "Data Access Application Block", "{AACD0E41-8540-4BF2-93DA-892BF3B0A938}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "DataAccess\Data\Data.csproj", "{A7486BE5-7B9C-4761-8D4A-81012E0E2B20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLBase", "DataAccess\BLBase\BLBase.csproj", "{E35E0456-1EB2-45FE-8CF7-D875EB89FD92}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Validation Application Block", "Validation Application Block", "{4852081A-DAFB-4084-BD7C-8FAA77D7101A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation", "Validation\Validation.csproj", "{00106A34-0F8E-454D-BE7E-6245CD54977C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Caching Application Block", "Caching Application Block", "{2499F4DD-C8F2-462F-88E2-300854FFC3F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caching", "Caching\Caching.csproj", "{0D643C45-0460-4BEC-8FBF-B7C4E4A21D75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logging Application Block", "Logging Application Block", "{B2A67BD2-95BD-4C72-8F27-880B67DCF623}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging", "Logging\Logging.csproj", "{3B18F205-0313-4E34-B96C-D568402CA674}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security Application Block", "Security Application Block", "{78E046EF-8584-4787-80BF-F75B3861B72B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cryptography Application Block", "Cryptography Application Block", "{8ED11C70-7455-4666-BBF7-86A742FE57BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security.Cryptography", "Security.Cryptography\Security.Cryptography.csproj", "{55CC9632-2CE1-430C-9CF2-93748CD99BE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Security", "Security\Security.csproj", "{911A72A2-471A-4875-95F7-3171FD3E48C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebCommon", "WebCommon\WebCommon.csproj", "{D55EFD64-387A-48B9-8F16-A14E86576745}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{25547459-7E49-4A0E-B8FB-B616CB795C14}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebCommon Application Block", "WebCommon Application Block", "{7BD3F1E9-3748-4B07-8156-FD90BF4A1F8F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dist", "dist", "{6B2E9AC6-4643-4D64-9BD1-B796E1A9DFEB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "packages", "packages", "{A083A640-97F0-4A54-B2D5-FCB6F693FC11}"
+	ProjectSection(SolutionItems) = preProject
+		packages\repositories.config = packages\repositories.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7486BE5-7B9C-4761-8D4A-81012E0E2B20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7486BE5-7B9C-4761-8D4A-81012E0E2B20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7486BE5-7B9C-4761-8D4A-81012E0E2B20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7486BE5-7B9C-4761-8D4A-81012E0E2B20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E35E0456-1EB2-45FE-8CF7-D875EB89FD92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E35E0456-1EB2-45FE-8CF7-D875EB89FD92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E35E0456-1EB2-45FE-8CF7-D875EB89FD92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E35E0456-1EB2-45FE-8CF7-D875EB89FD92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00106A34-0F8E-454D-BE7E-6245CD54977C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00106A34-0F8E-454D-BE7E-6245CD54977C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00106A34-0F8E-454D-BE7E-6245CD54977C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00106A34-0F8E-454D-BE7E-6245CD54977C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D643C45-0460-4BEC-8FBF-B7C4E4A21D75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D643C45-0460-4BEC-8FBF-B7C4E4A21D75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D643C45-0460-4BEC-8FBF-B7C4E4A21D75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D643C45-0460-4BEC-8FBF-B7C4E4A21D75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B18F205-0313-4E34-B96C-D568402CA674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B18F205-0313-4E34-B96C-D568402CA674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B18F205-0313-4E34-B96C-D568402CA674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B18F205-0313-4E34-B96C-D568402CA674}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55CC9632-2CE1-430C-9CF2-93748CD99BE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55CC9632-2CE1-430C-9CF2-93748CD99BE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55CC9632-2CE1-430C-9CF2-93748CD99BE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55CC9632-2CE1-430C-9CF2-93748CD99BE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{911A72A2-471A-4875-95F7-3171FD3E48C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{911A72A2-471A-4875-95F7-3171FD3E48C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{911A72A2-471A-4875-95F7-3171FD3E48C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{911A72A2-471A-4875-95F7-3171FD3E48C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D55EFD64-387A-48B9-8F16-A14E86576745}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D55EFD64-387A-48B9-8F16-A14E86576745}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D55EFD64-387A-48B9-8F16-A14E86576745}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D55EFD64-387A-48B9-8F16-A14E86576745}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A7486BE5-7B9C-4761-8D4A-81012E0E2B20} = {AACD0E41-8540-4BF2-93DA-892BF3B0A938}
+		{E35E0456-1EB2-45FE-8CF7-D875EB89FD92} = {AACD0E41-8540-4BF2-93DA-892BF3B0A938}
+		{00106A34-0F8E-454D-BE7E-6245CD54977C} = {4852081A-DAFB-4084-BD7C-8FAA77D7101A}
+		{0D643C45-0460-4BEC-8FBF-B7C4E4A21D75} = {2499F4DD-C8F2-462F-88E2-300854FFC3F8}
+		{3B18F205-0313-4E34-B96C-D568402CA674} = {B2A67BD2-95BD-4C72-8F27-880B67DCF623}
+		{55CC9632-2CE1-430C-9CF2-93748CD99BE9} = {8ED11C70-7455-4666-BBF7-86A742FE57BD}
+		{911A72A2-471A-4875-95F7-3171FD3E48C3} = {78E046EF-8584-4787-80BF-F75B3861B72B}
+		{D55EFD64-387A-48B9-8F16-A14E86576745} = {7BD3F1E9-3748-4B07-8156-FD90BF4A1F8F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Logging.5.0.505.1\lib\NET35;packages\EnterpriseLibrary.Security.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Data.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Validation.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.ExceptionHandling.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Caching.5.0.505.0\lib\NET35;packages\Unity.2.1.505.2\lib\NET35;packages\Unity.Interception.2.1.505.2\lib\NET35
+	EndGlobalSection
+EndGlobal
