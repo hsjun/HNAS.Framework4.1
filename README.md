@@ -1,10 +1,9 @@
 HNAS.Framework4.1
 =========
 
-**HNAS.Framework4.1** 是基于 **HNAS.Framework4.0**基础，通过剥离其中的微软企业库(5.0.414.0)源码，采取组件引用轻耦合模式。
+**HNAS.Framework4.1** 是基于 **HNAS.Framework4.0**基础，通过剥离其中的微软企业库(5.0.414.0)源码，采取组件引用的轻耦合模式。
 
-
-## 子模块说明
+## 模块说明
 
 1. HNAS.Framework4.Caching WEB 缓存
 2. HNAS.Framework4.Security.Cryptography 安全加密
