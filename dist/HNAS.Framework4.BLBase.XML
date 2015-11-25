@@ -1,0 +1,966 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HNAS.Framework4.BLBase</name>
+    </assembly>
+    <members>
+        <member name="T:HNAS.Framework4.BLBase.CallResult`1">
+            <summary>
+            返回值调用的方法
+            </summary>
+            <remarks>
+            该类用于在BusinessLogic项目的方法调用者提供一致的返回值。
+            </remarks>
+            <typeparam name="T">实例类型</typeparam>
+        </member>
+        <member name="F:HNAS.Framework4.BLBase.CallResult`1._error">
+            <summary>
+            异常
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.BLBase.CallResult`1._errorType">
+             <summary>
+            错误类型
+             </summary>
+        </member>
+        <member name="F:HNAS.Framework4.BLBase.CallResult`1._message">
+            <summary>
+            返回消息
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.BLBase.CallResult`1._messageCode">
+            <summary>
+            the code of the return message of the method
+            </summary>
+            <remarks>
+            Some callers may have realize a message mechanism
+            which provide a more detailed message about
+            the return message, in this case, the CallResult needs only
+            to return the code of the message.
+            </remarks>
+        </member>
+        <member name="F:HNAS.Framework4.BLBase.CallResult`1._result">
+            <summary>
+            返回值
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CallResult`1.#ctor(`0)">
+            <summary>
+            Initialize an instance of CallResult.
+            with the return result
+            </summary>
+            <remarks>
+            This constructor will return an instance of CallResult.
+            indicating the method has runned succefully
+            </remarks>
+            <param name="result">the returned value of the method</param>
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CallResult`1.#ctor(`0,System.String)">
+            <summary>
+            Initialize an instance of CallResult.
+            with the return result
+            </summary>
+            <remarks>
+            This constructor will return an instance of CallResult.
+            indicating the method has runned succefully
+            </remarks>
+            <param name="result">the returned value of the method</param>
+            <param name="message">the returned message of the method</param>
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CallResult`1.#ctor">
+            <summary>
+            Initialize an instance of CallResult.
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CallResult`1.StringIsNotEmpty(System.String,System.String)">
+            <summary>
+            Assert if the string argument is not null and not empty
+            </summary>
+            <exception cref="T:System.ArgumentException">If the string argument is null or empty</exception>
+            <param name="argumentName">the name of the argument</param>
+            <param name="argumentValue">the value of the argument</param>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.CallResult`1.HasError">
+            <summary>
+            If there is any error occurs during the operation
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.CallResult`1.Message">
+            <summary>
+            Gets or sets the returned message of the method
+            </summary>
+            <exception cref="T:System.ArgumentException">the returned message must be specified for get_Message</exception>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.CallResult`1.Result">
+            <summary>
+            Gets or sets the returned message of the method
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.CallResult`1.MessageCode">
+            <summary>
+            Gets or sets the code of the returned message
+            </summary>
+            <exception cref="T:System.ArgumentException">the returned message must be specified for get_MessageCode</exception>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.CallResult`1.Error">
+            <summary>
+            Gets or sets the error occurs during the method
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.CallResult`1.ErrorType">
+            <summary>
+            Gets or sets the type of the error that occurs during the method
+            </summary>
+        </member>
+        <member name="T:HNAS.Framework4.BLBase.CallErrorType">
+            <summary>
+            Enumeration for the type of error occurs during the operation
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.BLBase.CallErrorType.None">
+            <summary>
+            It's ok
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.BLBase.CallErrorType.General">
+            <summary>
+            A general error
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.BLBase.CallErrorType.System">
+            <summary>
+            A system level or fatal error
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.BLBase.CallErrorType.Business">
+            <summary>
+            An error associated with the breaking of some business rules
+            </summary>
+        </member>
+        <member name="T:HNAS.Framework4.BLBase.CommonBL">
+            <summary>
+            BusinessLogic层通用实现类
+            </summary>
+            Copyright (c) 2011 海航航空信息系统有限公司
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：王宇
+            修改日期：2012-02-24
+            版 本：1.0
+        </member>
+        <member name="F:HNAS.Framework4.BLBase.CommonBL.strPolicy">
+            <summary>
+            异常策略名称（Web.config配置）
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.BLBase.CommonBL.commonDA">
+            <summary>
+            数据访问实例
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.BLBase.CommonBL.Account">
+            <summary>
+            操作人
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.#ctor(System.String,System.String,HNAS.Framework4.Data.DataAccess)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="strDBName">数据库连接配置名</param>
+            <param name="strAccount">当前用户（操作人）</param>
+            <param name="dataAccess">数据访问接口</param>
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.GetOne``1(``0,System.Boolean)">
+            <summary>
+            获取数据返回第一个
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="bValidate">是否验证实体，默认不验证</param>
+            <returns>操作结果集</returns>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.GetList``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+             <summary>
+             获取数据返回List
+             </summary>
+             <typeparam name="T">数据实体类型</typeparam>
+             <param name="model">数据实体</param>
+             <param name="bCache">是否启用缓存，默认禁用</param>
+             <param name="strCacheKey">缓存名称</param>
+             <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+             <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+             <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+             <param name="parameters">自定义参数</param>
+             <param name="bValidate">是否验证实体，默认不验证</param>
+             <returns>操作结果集</returns>
+             <example>eg:
+             <code>
+             
+               //获取有效数据
+               StudentBM studentBM = new StudentBM()
+               {
+                   Valid = 1,
+                   Name = strName
+               };
+            
+               //支持自定义排序，验证开关（查询默认不验证实体对象），请确保列名的合法性
+               string strOrderBy = "cniID, cniClassID ASC";
+               //列过滤（默认返回所有列）
+               string strColumnFilter = "cniID,cniClassID,cnvcSID,cnvcName,cniSex,cndBirthday,cnvcEmail";
+               //行过滤
+               string strRowFilter = "";
+               //参数化
+               List&lt;DbParameter> parameters = new List&lt;DbParameter>();
+               if (!string.IsNullOrEmpty(txbMin.Text.Trim()))
+               {
+                   strRowFilter += " AND cniID>=@MinID";
+                   DbParameter parameter1 = new SqlParameter("MinID", Convert.ToInt32(txbMin.Text.Trim()));
+                   parameters.Add(parameter1);
+               }
+               if (!string.IsNullOrEmpty(txbMax.Text.Trim()))
+               {
+                   strRowFilter += " AND cniID&lt;=@MaxID";
+                   DbParameter parameter2 = new SqlParameter("MaxID", Convert.ToInt32(txbMax.Text.Trim()));
+                   parameters.Add(parameter2);
+               }
+              
+               //调用本方法获取数据
+               CallResult&lt;IList&lt;StudentBM>> cr = GetList(studentBM, false, strCacheKey: strCacheName, strOrderBy: strOrderBy, strColumnFilter:
+               strColumnFilter, strRowFilter: strRowFilter, parameters: parameters, bValidate: true);
+             
+               if (cr.HasError)//操作异常则HasError为true
+               {
+                   return null;
+               }        
+             </code>
+             返回数据为<c>cr.Result</c>
+             </example>
+             创 建 人：HNAS .Net Framework 4.0 项目组
+             创建日期：2011-12-5
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.GetDataSet``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            获取数据返回DataSet
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存</param>
+            <param name="strCacheKey">缓存名称</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID&gt;@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <param name="bValidate">是否验证实体，默认不验证</param>
+            <returns>操作结果集</returns>
+            <example>
+            参考GetList方法示例。<seealso cref="M:HNAS.Framework4.BLBase.CommonBL.GetList``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)"/>
+            </example>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.GetDataReader``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            获取数据返回DataReader
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存</param>
+            <param name="strCacheKey">缓存名称</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID&gt;@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <param name="bValidate">是否验证实体，默认不验证</param>
+            <returns>操作结果集</returns>
+            <example>
+            参考GetList方法示例。<seealso cref="M:HNAS.Framework4.BLBase.CommonBL.GetList``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)"/>
+            </example>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.GetDataTable``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            获取数据返回DataTable
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存</param>
+            <param name="strCacheKey">缓存名称</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="bValidate">是否验证实体，默认不验证</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID&gt;@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>操作结果集</returns>
+            <example>
+            参考GetList方法示例。<seealso cref="M:HNAS.Framework4.BLBase.CommonBL.GetList``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)"/>
+            </example>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.GetList``1(``0,HNAS.Framework4.Data.Pager@,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+             <summary>
+             获取数据返回List（支持分页）
+             </summary>
+             <typeparam name="T">数据实体类型</typeparam>
+             <param name="model">数据实体</param>
+             <param name="pager">分页实体</param>
+             <param name="bCache">是否启用缓存，默认禁用</param>
+             <param name="strCacheKey">缓存名称</param>
+             <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+             <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+             <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+             <param name="parameters">自定义参数</param>
+             <param name="bValidate">是否验证实体，默认不验证</param>
+             <returns>操作结果集</returns>
+             <example>eg:
+             <code>
+             
+               //获取有效数据
+               StudentBM studentBM = new StudentBM()
+               {
+                   Valid = 1,
+                   studentBM.Name = strName
+               };
+            
+               //支持自定义排序，验证开关（查询默认不验证实体对象），请确保列名的合法性
+               string strOrderBy = "cniID, cniClassID ASC";
+               //列过滤（默认返回所有列）
+               string strColumnFilter = "cniID,cniClassID,cnvcSID,cnvcName,cniSex,cndBirthday,cnvcEmail";
+               //分页设置
+               Pager pager = new Pager()
+               {
+                   PageSize = AspNetPager1.PageSize,
+                   PageIndex = AspNetPager1.CurrentPageIndex
+               };
+               
+               //调用本方法获取数据
+               CallResult&lt;IList&lt;StudentBM>> cr = new CommonBL().GetList(studentBM, ref pager);//数据库分页默认（UI层调用）
+               CallResult&lt;IList&lt;StudentBM>> cr = GetList(studentBM, ref pager, false, strCacheKey: strCacheName, strOrderBy: strOrderBy, 
+               strColumnFilter: strColumnFilter, bValidate: true);
+             
+               if (cr.HasError)//操作异常则HasError为true
+               {
+                   return null;
+               }        
+             </code>
+             返回数据为<c>cr.Result</c>
+             </example>
+             创 建 人：HNAS .Net Framework 4.0 项目组
+             创建日期：2011-12-5
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.GetDataSet``1(``0,HNAS.Framework4.Data.Pager@,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            获取数据返回DataSet（支持分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存</param>
+            <param name="strCacheKey">缓存名称</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID&gt;@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <param name="bValidate">是否验证实体，默认不验证</param>
+            <returns>操作结果集</returns>
+            <example>
+            参考GetList方法示例。<seealso cref="M:HNAS.Framework4.BLBase.CommonBL.GetList``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)"/>
+            </example>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.GetDataReader``1(``0,HNAS.Framework4.Data.Pager@,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            获取数据返回DataReader（支持分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存</param>
+            <param name="strCacheKey">缓存名称</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID&gt;@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <param name="bValidate">是否验证实体，默认不验证</param>
+            <returns>操作结果集</returns>
+            <example>
+            参考GetList方法示例。<seealso cref="M:HNAS.Framework4.BLBase.CommonBL.GetList``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)"/>
+            </example>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.GetDataTable``1(``0,HNAS.Framework4.Data.Pager@,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            获取数据返回DataTable（支持分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存</param>
+            <param name="strCacheKey">缓存名称</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="bValidate">是否验证实体，默认不验证</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID&gt;@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>操作结果集</returns>
+            <example>
+            参考GetList方法示例。<seealso cref="M:HNAS.Framework4.BLBase.CommonBL.GetList``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)"/>
+            </example>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.GetOneByLike``1(``0,System.Boolean)">
+            <summary>
+            模糊查询，获取数据返回第一个
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="bValidate">是否验证实体，默认不验证</param>
+            <returns>操作结果集</returns>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.GetListByLike``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            模糊查询，获取数据返回List
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存</param>
+            <param name="strCacheKey">缓存名称</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID&gt;@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <param name="bValidate">是否验证实体，默认不验证</param>
+            <returns>操作结果集</returns>
+            <example>
+            参考GetList方法示例。<seealso cref="M:HNAS.Framework4.BLBase.CommonBL.GetList``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)"/>
+            </example>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.GetDataSetByLike``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            模糊查询，获取数据返回DataSet
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存</param>
+            <param name="strCacheKey">缓存名称</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID&gt;@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <param name="bValidate">是否验证实体，默认不验证</param>
+            <returns>操作结果集</returns>
+            <example>
+            参考GetList方法示例。<seealso cref="M:HNAS.Framework4.BLBase.CommonBL.GetList``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)"/>
+            </example>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.GetDataReaderByLike``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            模糊查询，获取数据返回DataReader
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存</param>
+            <param name="strCacheKey">缓存名称</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID&gt;@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <param name="bValidate">是否验证实体，默认不验证</param>
+            <returns>操作结果集</returns>
+            <example>
+            参考GetList方法示例。<seealso cref="M:HNAS.Framework4.BLBase.CommonBL.GetList``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)"/>
+            </example>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.GetDataTableByLike``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            模糊查询，获取数据返回DataTable
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存</param>
+            <param name="strCacheKey">缓存名称</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID&gt;@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <param name="bValidate">是否验证实体，默认不验证</param>
+            <returns>操作结果集</returns>
+            <example>
+            参考GetList方法示例。<seealso cref="M:HNAS.Framework4.BLBase.CommonBL.GetList``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)"/>
+            </example>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.GetListByLike``1(``0,HNAS.Framework4.Data.Pager@,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            模糊查询，获取数据返回List（支持分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存</param>
+            <param name="strCacheKey">缓存名称</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID&gt;@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <param name="bValidate">是否验证实体，默认不验证</param>
+            <returns>操作结果集</returns>
+            <example>
+            参考GetList方法示例。<seealso cref="M:HNAS.Framework4.BLBase.CommonBL.GetList``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)"/>
+            </example>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.GetDataSetByLike``1(``0,HNAS.Framework4.Data.Pager@,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            模糊查询，获取数据返回DataSet（支持分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存</param>
+            <param name="strCacheKey">缓存名称</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID&gt;@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <param name="bValidate">是否验证实体，默认不验证</param>
+            <returns>操作结果集</returns>
+            <example>
+            参考GetList方法示例。<seealso cref="M:HNAS.Framework4.BLBase.CommonBL.GetList``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)"/>
+            </example>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.GetDataReaderByLike``1(``0,HNAS.Framework4.Data.Pager@,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            模糊查询，获取数据返回DataReader（支持分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存</param>
+            <param name="strCacheKey">缓存名称</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID&gt;@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <param name="bValidate">是否验证实体，默认不验证</param>
+            <returns>操作结果集</returns>
+            <example>
+            参考GetList方法示例。<seealso cref="M:HNAS.Framework4.BLBase.CommonBL.GetList``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)"/>
+            </example>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.GetDataTableByLike``1(``0,HNAS.Framework4.Data.Pager@,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            模糊查询，获取数据返回DataTable（支持分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存</param>
+            <param name="strCacheKey">缓存名称</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID&gt;@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <param name="bValidate">是否验证实体，默认不验证</param>
+            <returns>操作结果集</returns>
+            <example>
+            参考GetList方法示例。<seealso cref="M:HNAS.Framework4.BLBase.CommonBL.GetList``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)"/>
+            </example>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.Add``1(``0,System.Boolean,System.Boolean)">
+             <summary>
+             添加数据
+             </summary>
+             <typeparam name="T">数据实体类型</typeparam>
+             <param name="model">数据实体</param>
+             <param name="bLogging">是否记录日志，默认记录</param>
+             <param name="bValidate">是否验证实体，默认验证</param>
+             <returns>操作结果集</returns>
+             <example>eg:
+             <code>
+             SubjectBM subjectBM = new SubjectBM()
+             {
+                 ID = Guid.NewGuid(),
+                 Name = txbName.Text.Trim(),
+                 Score = dScore
+             };
+            
+             //存入数据库
+             CallResult&lt;string> cr = commonBL.Add(subjectBM);
+             if (cr.HasError)
+             {
+                 AlertMsn.PopMsn(cr.Message);
+             }
+             </code>
+             返回数据为<c>cr.Result</c>
+             </example>
+             创 建 人：HNAS .Net Framework 4.0 项目组
+             创建日期：2011-12-5
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.Add``1(System.Collections.Generic.IList{``0},System.Boolean,System.Boolean)">
+            <summary>
+            批量添加数据
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="modelList">数据实体集合</param>
+            <param name="bLogging">是否记录日志，默认记录</param>
+            <param name="bValidate">是否验证实体，默认验证</param>
+            <returns>操作结果集</returns>
+            <example>
+            参考Add方法示例。<seealso>
+                        <cref>Add{T}</cref>
+                      </seealso>
+            </example>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.Update``1(``0,System.Data.Common.DbParameter[],System.Boolean,System.Boolean)">
+             <summary>
+             更新数据（默认更新条件为主键）
+             </summary>
+             <typeparam name="T">数据实体类型</typeparam>
+             <param name="model">数据实体</param>
+             <param name="conditionParameters">条件参数，参数名称请与数据库列名一致</param>
+             <param name="bLogging">是否记录日志，默认记录</param>
+             <param name="bValidate">是否验证实体，默认验证</param>
+             <returns>操作结果集</returns>
+             <example>eg:
+             <code>
+             SubjectBM subjectBm = new SubjectBM();
+             subjectBm.Name = txbName.Text.Trim();
+            
+             //自定义条件参数
+             DbParameter[] parameter = new DbParameter[]
+                                           {
+                                               new SqlParameter("cnfScore", SqlDbType.Float)
+                                           };
+             parameter[0].Value = txbScore.Text.Trim();
+            
+             CallResult&lt;bool> cr = new CommonBL().Update(subjectBm, parameter);
+             if (!cr.HasError)
+             {
+                 //更新成功重新绑定数据
+                 gvSubject.DataBind();
+             }
+             </code>
+             返回数据为<c>cr.Result</c>
+             </example>
+             创 建 人：HNAS .Net Framework 4.0 项目组
+             创建日期：2011-12-5
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.UpdateList``1(System.Collections.Generic.IList{``0},System.Boolean,System.Boolean)">
+            <summary>
+            批量更新数据（默认更新条件为主键）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="modelList">数据实体集合</param>
+            <param name="bLogging">是否记录日志，默认记录</param>
+            <param name="bValidate">是否验证实体，默认验证</param>
+            <returns>操作结果集</returns>
+            <example>
+            参考Update方法示例。<seealso>
+                        <cref>Update{T}</cref>
+                      </seealso>
+            </example>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.UpdateList``1(System.Collections.Generic.Dictionary{``0,System.Data.Common.DbParameter[]},System.Boolean,System.Boolean)">
+            <summary>
+            批量更新数据（自定义条件更新）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="dicModel_Parameter">数据实体、更新条件键值集合</param>
+            <param name="bLogging">是否记录日志，默认记录</param>
+            <param name="bValidate">是否验证实体，默认验证</param>
+            <returns>操作结果集</returns>
+            <example>
+            参考Update方法示例。<seealso>
+                        <cref>Update{T}</cref>
+                      </seealso>
+            </example>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.Delete``1(``0,System.Data.Common.DbParameter[],System.Boolean,System.Boolean)">
+             <summary>
+             删除数据（默认删除条件为主键）
+             </summary>
+             <typeparam name="T">数据实体类型</typeparam>
+             <param name="model">数据实体</param>
+             <param name="conditionParameters">条件参数，参数名称请与数据库列名一致</param>
+             <param name="bLogging">是否记录日志，默认记录</param>
+             <param name="bValidate">是否验证实体，默认不验证</param>
+             <returns>操作结果集</returns>
+             <example>eg:
+             <code>
+             //从数据库中删除
+             CallResult&lt;bool> cr = new CommonBL().Delete(new SubjectBM
+             {
+                 ID = Guid.Parse(lb.CommandName)
+             });
+            
+             if (!cr.HasError || cr.Result)
+             {
+                 //删除成功重新绑定数据
+                 gvSubject.DataBind();
+             }        
+             
+             </code>
+             返回数据为<c>cr.Result</c><br/>
+             自定义条件删除参考Update方法示例。<seealso>
+                         <cref>Update{T}</cref>
+                       </seealso>
+             </example>
+             创 建 人：HNAS .Net Framework 4.0 项目组
+             创建日期：2011-12-5
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.Delete``1(System.Collections.Generic.IList{``0},System.Boolean,System.Boolean)">
+            <summary>
+            批量删除数据（默认删除条件为主键）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="modelList">数据实体集合</param>
+            <param name="bLogging">是否记录日志，默认记录</param>
+            <param name="bValidate">是否验证实体，默认不验证</param>
+            <returns>操作结果集</returns>
+            <example>
+            参考Delete方法示例。<seealso>
+                        <cref>Delete{T}</cref>
+                      </seealso>
+            </example>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.Delete``1(System.Collections.Generic.Dictionary{``0,System.Data.Common.DbParameter[]},System.Boolean,System.Boolean)">
+            <summary>
+            批量删除数据（自定义条件删除）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="dicModel_Parameter">数据实体、更新条件键值集合</param>
+            <param name="bLogging">是否记录日志，默认记录</param>
+            <param name="bValidate">是否验证实体，默认不验证</param>
+            <returns>操作结果集</returns>
+            <example>
+            参考Delete方法示例。<seealso>
+                        <cref>Delete{T}</cref>
+                      </seealso>
+            </example>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.BLBase.CommonBL.HandleException(System.Exception,System.Boolean)">
+            <summary>
+            处理异常
+            </summary>
+            <param name="ex">异常</param>
+            <param name="bLogging">是否记录日志，默认记录</param>
+        </member>
+        <member name="T:HNAS.Framework4.BLBase.Message">
+            <summary>
+            提示信息类
+            </summary>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+             Copyright (c) 2011 海南海航航空信息系统有限公司
+             版 本：1.0	
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Add_Exist">
+            <summary>
+            您添加的记录已存在
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Add_Success">
+            <summary>
+            添加成功
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Add_Unsuccess">
+            <summary>
+            添加失败
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Del_NotChooseObject">
+            <summary>
+            请选择删除对象
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Del_Success">
+            <summary>
+            删除成功
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Del_Unsuccess">
+            <summary>
+            删除失败
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Error_DataBase">
+            <summary>
+            数据库异常，请联系管理员
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Error_Format">
+            <summary>
+            格式错误，请重新输入
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Error_Interface">
+            <summary>
+            数据接口异常，请联系管理员
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Error_NoRight">
+            <summary>
+            您没有权限访问该栏目
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Error_OverTime">
+            <summary>
+            操作已超时，请稍后重试
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Error_Parameter">
+            <summary>
+            参数异常，请重试
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Error_Service">
+            <summary>
+            "服务暂时不可用，请稍后重试
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Error_System">
+            <summary>
+            系统发生异常，请联系管理员
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Lost_QueryString">
+            <summary>
+            访问地址有参数丢失，请从正常途径访问页面
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.NoData">
+            <summary>
+            在当前查询条件下没有查到数据，请重新选择查询条件
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.NoDataSimple">
+            <summary>
+            对不起，没有符合条件的数据
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Operate_NotChooseObject">
+            <summary>
+            请选择操作对象
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Operate_Success">
+            <summary>
+            操作成功
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Operate_Unsuccess">
+            <summary>
+            操作失败
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Update_Success">
+            <summary>
+            更新成功
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Update_Unsuccess">
+            <summary>
+            更新失败
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Validate_Success">
+            <summary>
+            验证成功
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.BLBase.Message.Validate_Unsuccess">
+            <summary>
+            验证失败
+            </summary>
+        </member>
+    </members>
+</doc>

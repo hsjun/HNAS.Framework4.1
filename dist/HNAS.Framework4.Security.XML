@@ -1,0 +1,589 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HNAS.Framework4.Security</name>
+    </assembly>
+    <members>
+        <member name="T:HNAS.Framework4.Security.FormsAuth">
+            <summary>
+            Forms认证类
+            </summary>
+             Copyright (c) 2012 海南海航航空信息系统有限公司
+             创 建 人：王宇
+             创建日期：2012年2月16日
+             修 改 人：
+             修改日期：
+             版 本：1.0	
+        </member>
+        <member name="M:HNAS.Framework4.Security.FormsAuth.GetADAccount(System.String)">
+            <summary>
+            获取登录AD账号
+            </summary>
+            <param name="strDomain">域</param>
+            <returns>获取系统登录AD账号</returns>
+            创建人：王宇
+            创建时间：2012年2月16日
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.FormsAuth.FormsLogon(System.String,System.String,System.String,System.Web.UI.Page,System.Boolean)">
+            <summary>
+            Forms登录
+            </summary>
+            <param name="domain">域名</param>
+            <param name="username">账号</param>
+            <param name="pwd">密码</param>
+            <param name="bCookiePersistent"></param>
+            <param name="page">页面实例，写入Cookie</param>
+            <returns></returns>
+            创建人：王宇
+            创建时间：2012年2月16日
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.FormsAuth.GetAccount(System.String)">
+            <summary>
+            获取Windows账号
+            </summary>
+            <param name="strDomain">域</param>
+            <returns>Windows账号</returns>
+            创建人：王宇
+            创建时间：2012年5月28日
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="T:HNAS.Framework4.Security.InputFilter">
+            <summary>
+            用于统一安全验证
+            </summary>
+            Copyright (c) 2011 海航航空信息系统有限公司
+            创 建 人：谭强
+            创建日期：2012-9-20
+            修 改 人：
+            修改日期：
+            版 本：
+        </member>
+        <member name="M:HNAS.Framework4.Security.InputFilter.isNum(System.String)">
+            <summary>
+            防止sql注入（数字类型）。
+            当要把参数拼接到sql语句中，且这个参数是sting类型，但在sql语句中必须是数字型，符合
+            "*** where a = "+参数 或类似结构时，可以采用此方法检测。用来验证字符串是否是数字型
+            在拼接sql语句之前使用此方法检测即可,无论小数，整数，正负数都是true
+            </summary>
+            创 建 人：谭强
+            创建日期：2011-12-14
+            修 改 人：
+            修改日期：
+            版 本：
+            <param name="Num">要嵌入sql的字符串参数</param>
+            <returns>是否是数字</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.InputFilter.IsEmail(System.String)">
+            <summary>
+            验证邮箱
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.InputFilter.IsUrl(System.String)">
+            <summary>
+            验证网址
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.InputFilter.IsDateTime(System.String)">
+            
+            <summary>
+            验证日期
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.InputFilter.IsMobile(System.String)">
+            <summary>
+            验证手机号,目前只验证它是纯数字，并且在11-20位之间
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.InputFilter.IsPhone(System.String)">
+            <summary>
+            验证电话号码，支持分机号
+            </summary>
+            <param name="value">The value.</param>
+            <returns>
+              <c>true</c> if the specified value is phone; otherwise, <c>false</c>.
+            </returns>
+            创 建 人：刘鹏（liu-peng33）
+            创建日期：2012/9/29
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.InputFilter.IsIP(System.String)">
+            
+            <summary>
+            验证IP
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.InputFilter.IsIDCard(System.String)">
+            
+            <summary>
+            验证身份证是否有效
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.InputFilter.IsIDCard18(System.String)">
+            <summary>
+            IsIDCard18
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.InputFilter.IsIDCard15(System.String)">
+            <summary>
+            IsIDCard15
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.InputFilter.IsInt(System.String)">
+            <summary>
+            是不是Int型的
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.InputFilter.IsLengthStr(System.String,System.Int32,System.Int32)">
+            <summary>
+            看字符串的长度是不是在限定数之间 一个中文为两个字符
+            </summary>
+            <param name="source">字符串</param>
+            <param name="begin">大于等于</param>
+            <param name="end">小于等于</param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.InputFilter.IsTel(System.String)">
+            
+            <summary>
+            是不是中国电话，格式010-85849685
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.InputFilter.IsPostCode(System.String)">
+            
+            <summary>
+            邮政编码 6个数字
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.InputFilter.IsChinese(System.String)">
+            
+            <summary>
+            中文
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.InputFilter.IsNormalChar(System.String)">
+            
+            <summary>
+            验证是不是正常字符 字母，数字，下划线的组合
+            </summary>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.InputFilter.Filter(System.String,System.Boolean,System.String,System.String)">
+            <summary>
+            防SQL注入，过滤XSS攻击脚本，敏感词过滤
+            </summary>   
+            <param name="html">传入字符串</param>
+            <param name="bFilterSensitiveWord">是否过滤敏感词，默认不过滤</param>
+            <param name="wordPath">敏感词文件路径，默认"~/sensitiveword.txt"</param>
+            <param name="replaceWord">替换后的字符，默认"***"</param>
+            <returns>过滤后的字符串</returns>   
+        </member>
+        <member name="M:HNAS.Framework4.Security.InputFilter.ReplaceKeyword(System.String,System.String,System.String)">
+            <summary>
+            屏蔽敏感词
+            </summary>
+            <param name="s">待过滤字符串</param>
+            <param name="wordPath">敏感词文件路径，默认"~/sensitiveword.txt"</param>
+            <param name="replaceWord">替换后的字符，默认"***"</param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.InputFilter.GetReg(System.String)">
+            <summary>
+            获取正则表达式
+            </summary>
+            <param name="wordPath">敏感词文件路径，默认"~/sensitiveword.txt"</param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.InputFilter.GetCache(System.String)">
+            <summary>
+            获取当前应用程序指定CacheKey的Cache值
+            </summary>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2012-1-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.InputFilter.SetCache(System.String,System.Object)">
+            <summary>
+            设置当前应用程序指定CacheKey的Cache值
+            </summary>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2012-1-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="T:HNAS.Framework4.Security.IPLocation">
+            <summary>
+            IP归属地类
+            </summary>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+             Copyright (c) 2011 海南海航航空信息系统有限公司
+             版 本：1.0	
+        </member>
+        <member name="P:HNAS.Framework4.Security.IPLocation.IP">
+            <summary>
+            IP地址
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Security.IPLocation.Country">
+            <summary>
+            归属地
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Security.IPLocation.Local">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="T:HNAS.Framework4.Security.IPLocator">
+            <summary>
+            IP归属地查询类（支持纯真IP数据库）
+            </summary>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+             Copyright (c) 2011 海南海航航空信息系统有限公司
+             版 本：1.0	
+        </member>
+        <member name="M:HNAS.Framework4.Security.IPLocator.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="dataPath">纯真IP数据库路径</param>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.IPLocator.Query(System.String)">
+            <summary>
+            查询IP归属地
+            </summary>
+            <param name="ip"></param>
+            <returns>IPLocation IP,Country,Local</returns>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.IPLocator.IpToInt(System.String)">
+            <summary>
+            IP转为long型
+            </summary>
+            <param name="ip"></param>
+            <returns></returns>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.IPLocator.IntToIP(System.Int64)">
+            <summary>
+            long型转为IP
+            </summary>
+            <param name="ip_Int"></param>
+            <returns></returns>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.IPLocator.GetStartIp(System.Int64,System.Int64@)">
+            <summary>
+            获取起始IP
+            </summary>
+            <param name="left"></param>
+            <param name="endIpOff"></param>
+            <returns></returns>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.IPLocator.GetEndIp(System.Int64,System.Int32@)">
+            <summary>
+            获取结束IP
+            </summary>
+            <param name="endIpOff"></param>
+            <param name="countryFlag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.IPLocator.GetCountry(System.Int64,System.Int32,System.String@)">
+            <summary> 
+            查询所属国家。Gets the country. 
+            </summary> 
+            <param name="endIpOff">The end ip off.</param> 
+            <param name="countryFlag">The country flag.</param> 
+            <param name="local">The local.</param> 
+            <returns>country</returns> 
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.IPLocator.GetFlagStr(System.Int64@,System.Int32@,System.Int64@)">
+            <summary>
+            
+            </summary>
+            <param name="offset"></param>
+            <param name="countryFlag"></param>
+            <param name="endIpOff"></param>
+            <returns></returns>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.IPLocator.GetStr(System.Int64@)">
+            <summary>
+            
+            </summary>
+            <param name="offset"></param>
+            <returns></returns>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="P:HNAS.Framework4.Security.IPLocator.Count">
+            <summary>
+            IPCount
+            </summary>
+        </member>
+        <member name="T:HNAS.Framework4.Security.LdapAuthentication">
+            <summary>
+            LdapAuthentication 的摘要描述
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.Security.LdapAuthentication.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Security.LdapAuthentication.IsAuthenticated(System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="domain"></param>
+            <param name="username"></param>
+            <param name="pwd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.LdapAuthentication.GetGroups">
+            <summary>
+            获取用户组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HNAS.Framework4.Security.SiteSecurity">
+            <summary>
+            网站安全类：防止SQL注入、获取客户端信息
+            </summary>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+             Copyright (c) 2011 海南海航航空信息系统有限公司
+             版 本：1.0	
+        </member>
+        <member name="F:HNAS.Framework4.Security.SiteSecurity.SQLInjectionMessage">
+            <summary>
+            防SQL注入提示
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.Security.SiteSecurity.strSQLChars">
+            <summary>
+            特殊字符定义
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.Security.SiteSecurity.strSQLKeys">
+            <summary>
+            关键字定义
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.Security.SiteSecurity.SQLChars">
+            <summary>
+            特殊字符字符串数组
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.Security.SiteSecurity.SQLKeys">
+            <summary>
+            关键字字符串数组
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.Security.SiteSecurity.GetIllegalKeys(System.Boolean)">
+            <summary>
+            获取过滤的关键字
+            </summary>
+            <param name="bIncludeKeys">是否返回SQL关键字如select,insert等，默认返回</param>
+            <returns></returns>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.SiteSecurity.KeyValueCheck(System.String,System.String@,System.Boolean,System.String,System.String)">
+            <summary>
+             判断string是否包含关键字
+            </summary> 
+            <param name="strValue">关键字</param>
+            <param name="strChar">含有的敏感字符</param>
+            <param name="bCheckKeys">是否检查SQL关键字如select,insert等，默认检查</param>
+            <param name="strIllegalChars">待检查特殊字符的配置文件节点名称，关键字直接用'，'（全角逗号）隔开，为空则检查框架默认特殊字符</param>
+            <param name="strIllegalSQLKeys">待检查SQL关键字的配置文件节点名称，关键字直接用'，'（全角逗号）隔开，为空则检查框架默认关键字</param>
+            <returns>true=包含;false=不包含</returns>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.SiteSecurity.CheckSQLInjection(System.Web.HttpApplication,System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            判断Request是否包含关键字，有则提示
+            </summary>
+            <param name="httpApplication">httpApplication</param>
+            <param name="bCheckKeys">是否检查SQL关键字如select,insert等，默认检查</param>
+            <param name="strIllegalChars">待检查特殊字符的配置文件节点名称，关键字直接用'，'（全角逗号）隔开，为空则检查框架默认特殊字符</param>
+            <param name="strIllegalSQLKeys">待检查SQL关键字的配置文件节点名称，关键字直接用'，'（全角逗号）隔开，为空则检查框架默认关键字</param>
+            <param name="strErrorUrl">错误提示地址（还有问题）</param>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.SiteSecurity.CheckSQLInjectionReturn(System.Web.HttpApplication,System.Boolean,System.String,System.String)">
+            <summary>
+            判断Request是否包含关键字，有则返回含过滤关键字的变量值，无则返回null
+            </summary>
+            <param name="httpApplication">httpApplication</param>
+            <param name="bCheckKeys">是否检查SQL关键字如select,insert等，默认检查</param>
+            <param name="strIllegalChars">待检查特殊字符的配置文件节点名称，关键字直接用'，'（全角逗号）隔开，为空则检查框架默认特殊字符</param>
+            <param name="strIllegalSQLKeys">待检查SQL关键字的配置文件节点名称，关键字直接用'，'（全角逗号）隔开，为空则检查框架默认关键字</param>
+            <returns>返回含过滤关键字的变量值</returns>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.SiteSecurity.CheckUrlHack(System.Boolean,System.String,System.String)">
+            <summary>
+             判断URL是否包含关键字
+            </summary> 
+            <param name="bCheckKeys">是否检查SQL关键字如select,insert等，默认检查</param>
+            <param name="strIllegalChars">待检查特殊字符的配置文件节点名称，关键字直接用'，'（全角逗号）隔开，为空则检查框架默认特殊字符</param>
+            <param name="strIllegalSQLKeys">待检查SQL关键字的配置文件节点名称，关键字直接用'，'（全角逗号）隔开，为空则检查框架默认关键字</param>
+            <returns>true=包含;false=不包含</returns>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.SiteSecurity.GetSafeString(System.String)">
+            <summary>
+            替换字符串中特殊字符
+            </summary>
+            <param name="strSource"></param>
+            <returns></returns>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.SiteSecurity.GetClientIP">
+            <summary>
+            获取客户端IP
+            </summary>
+            <returns></returns>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.SiteSecurity.GetClientMac">
+            <summary>
+            获取客户端Mac地址
+            </summary>
+            <returns></returns>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.SiteSecurity.GetClientBrowser">
+            <summary>
+            获取浏览器版本号
+            </summary>
+            <returns></returns>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.SiteSecurity.GetClientOS">
+            <summary>
+            获取客户端操作系统版本号
+            </summary>
+            <returns></returns>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.SiteSecurity.GetClientInfos">
+            <summary>
+            获取客户端信息
+            </summary>
+            <returns></returns>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Security.SiteSecurity.GetClientInfo(System.Boolean)">
+            <summary>
+            获取客户端信息（IP、浏览器版本、操作系统、User Agent）
+            </summary>
+            <param name="bIncludeAgent">是否包含User Agent</param>
+            <returns></returns>
+             创 建 人：王宇
+             创建日期：2011年11月25日
+             修 改 人：
+             修改日期：
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,918 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HNAS.Framework4.Security.Cryptography</name>
+    </assembly>
+    <members>
+        <member name="T:HNAS.Framework4.Security.Cryptography.BigInteger">
+            <summary>
+            大整数类
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.Security.Cryptography.BigInteger.primesBelow2000">
+            <summary>
+            primes smaller than 2000 to test the generated prime number
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.Security.Cryptography.BigInteger.dataLength">
+            <summary>
+            number of actual chars used
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.#ctor">
+            <summary>
+            Constructor (Default value for BigInteger is 0
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.#ctor(System.Int64)">
+            <summary>
+            Constructor (Default value provided by long)
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.#ctor(System.UInt64)">
+            <summary>
+            Constructor (Default value provided by ulong)
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.#ctor(HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Constructor (Default value provided by BigInteger)
+            </summary>
+            <param name="bi"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.#ctor(System.String,System.Int32)">
+            <summary>
+            Constructor (Default value provided by a string of digits of the specified base)
+            </summary>
+            <param name="value"></param>
+            <param name="radix"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.#ctor(System.Byte[])">
+            <summary>
+            Constructor (Default value provided by an array of bytes)
+            </summary>
+            <param name="inData"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.#ctor(System.Byte[],System.Int32)">
+            <summary>
+            Constructor (Default value provided by an array of bytes of the specified length.)
+            </summary>
+            <param name="inData"></param>
+            <param name="inLen"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.#ctor(System.UInt32[])">
+            <summary>
+            Constructor (Default value provided by an array of unsigned integers)
+            </summary>
+            <param name="inData"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_Implicit(System.Int64)~HNAS.Framework4.Security.Cryptography.BigInteger">
+            <summary>
+            Overloading of the typecast operator.
+            For BigInteger bi = 10;
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_Implicit(System.UInt64)~HNAS.Framework4.Security.Cryptography.BigInteger">
+            <summary>
+            Overloading of the typecast operator.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_Implicit(System.Int32)~HNAS.Framework4.Security.Cryptography.BigInteger">
+            <summary>
+            Overloading of the typecast operator.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_Implicit(System.UInt32)~HNAS.Framework4.Security.Cryptography.BigInteger">
+            <summary>
+            Overloading of the typecast operator.
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_Addition(HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+             Overloading of addition operator
+            </summary>
+            <param name="bi1"></param>
+            <param name="bi2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_Increment(HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Overloading of the unary ++ operator
+            </summary>
+            <param name="bi1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_Subtraction(HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Overloading of subtraction operator
+            </summary>
+            <param name="bi1"></param>
+            <param name="bi2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_Decrement(HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Overloading of the unary -- operator
+            </summary>
+            <param name="bi1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_Multiply(HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Overloading of multiplication operator
+            </summary>
+            <param name="bi1"></param>
+            <param name="bi2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_LeftShift(HNAS.Framework4.Security.Cryptography.BigInteger,System.Int32)">
+            <summary>
+            Overloading of unary double less than  operators
+            </summary>
+            <param name="bi1"></param>
+            <param name="shiftVal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.shiftLeft(System.UInt32[],System.Int32)">
+            <summary>
+            least significant bits at lower part of buffer
+            </summary>
+            <param name="buffer"></param>
+            <param name="shiftVal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_RightShift(HNAS.Framework4.Security.Cryptography.BigInteger,System.Int32)">
+            <summary>
+            Overloading of unary >> operators
+            </summary>
+            <param name="bi1"></param>
+            <param name="shiftVal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.shiftRight(System.UInt32[],System.Int32)">
+            <summary>
+            shiftRight
+            </summary>
+            <param name="buffer"></param>
+            <param name="shiftVal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_OnesComplement(HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Overloading of the NOT operator (1's complement) 
+            </summary>
+            <param name="bi1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_UnaryNegation(HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Overloading of the NEGATE operator (2's complement)
+            </summary>
+            <param name="bi1"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_Equality(HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Overloading of equality operator
+            </summary>
+            <param name="bi1"></param>
+            <param name="bi2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_Inequality(HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Overloading of equality operator
+            </summary>
+            <param name="bi1"></param>
+            <param name="bi2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.Equals(System.Object)">
+            <summary>
+            Overloading of equality operator
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.GetHashCode">
+            <summary>
+            GetHashCode
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_GreaterThan(HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Overloading of inequality operator
+            </summary>
+            <param name="bi1"></param>
+            <param name="bi2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_LessThan(HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Overloading of inequality operator
+            </summary>
+            <param name="bi1"></param>
+            <param name="bi2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_GreaterThanOrEqual(HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Overloading of inequality operator
+            </summary>
+            <param name="bi1"></param>
+            <param name="bi2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_LessThanOrEqual(HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Overloading of inequality operator
+            </summary>
+            <param name="bi1"></param>
+            <param name="bi2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.multiByteDivide(HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+             Private function that supports the division of two numbers with a divisor that has more than 1 digit.
+             
+             Algorithm taken from [1]
+            </summary>
+            <param name="bi1"></param>
+            <param name="bi2"></param>
+            <param name="outQuotient"></param>
+            <param name="outRemainder"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.singleByteDivide(HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Private function that supports the division of two numbers with
+            a divisor that has only 1 digit.
+            </summary>
+            <param name="bi1"></param>
+            <param name="bi2"></param>
+            <param name="outQuotient"></param>
+            <param name="outRemainder"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_Division(HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Overloading of division operator
+            </summary>
+            <param name="bi1"></param>
+            <param name="bi2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_Modulus(HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Overloading of modulus operator
+            </summary>
+            <param name="bi1"></param>
+            <param name="bi2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_BitwiseAnd(HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Overloading of bitwise AND operator
+            </summary>
+            <param name="bi1"></param>
+            <param name="bi2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_BitwiseOr(HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Overloading of bitwise OR operator
+            </summary>
+            <param name="bi1"></param>
+            <param name="bi2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.op_ExclusiveOr(HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Overloading of bitwise XOR operator
+            </summary>
+            <param name="bi1"></param>
+            <param name="bi2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.max(HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Returns max(this, bi)
+            </summary>
+            <param name="bi"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.min(HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Returns min(this, bi)
+            </summary>
+            <param name="bi"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.abs">
+            <summary>
+            Returns the absolute value
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.ToString">
+            <summary>
+            Returns a string representing the BigInteger in base 10.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.ToString(System.Int32)">
+             <summary>
+             Returns a string representing the BigInteger in sign-and-magnitude
+             format in the specified radix.
+            
+             Example
+             -------
+             If the value of BigInteger is -255 in base 10, then
+             ToString(16) returns "-FF"
+             </summary>
+             <param name="radix"></param>
+             <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.ToHexString">
+             <summary>
+             Returns a hex string showing the contains of the BigInteger
+            
+             Examples
+             -------
+             1) If the value of BigInteger is 255 in base 10, then
+                ToHexString() returns "FF"
+            
+             2) If the value of BigInteger is -255 in base 10, then
+               ToHexString() returns ".....FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF01",
+                which is the 2's complement representation of -255.
+            
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.modPow(HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Modulo Exponentiation 取幂 模计算 
+            </summary>
+            <param name="exp"></param>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.BarrettReduction(HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Fast calculation of modular reduction using Barrett's reduction.
+            
+            Reference [4]
+            </summary>
+            <param name="x"></param>
+            <param name="n"></param>
+            <param name="constant"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.gcd(HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Returns gcd(this, bi)：greatest common divisor最大公约数
+            </summary>
+            <param name="bi"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.genRandomBits(System.Int32,System.Random)">
+            <summary>
+            Populates "this" with the specified amount of random bits
+            </summary>
+            <param name="bits"></param>
+            <param name="rand"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.bitCount">
+             <summary>
+             Returns the position of the most significant bit in the BigInteger.
+            
+             Eg.  The result is 0, if the value of BigInteger is 0...0000 0000
+                  The result is 1, if the value of BigInteger is 0...0000 0001
+                  The result is 2, if the value of BigInteger is 0...0000 0010
+                  The result is 2, if the value of BigInteger is 0...0000 0011
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.FermatLittleTest(System.Int32)">
+             <summary>
+             Probabilistic prime test based on Fermat's little theorem
+            
+             </summary>
+             <param name="confidence"></param>
+             <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.RabinMillerTest(System.Int32)">
+             <summary>
+             Probabilistic prime test based on Rabin-Miller's
+            
+             </summary>
+             <param name="confidence"></param>
+             <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.SolovayStrassenTest(System.Int32)">
+            <summary>
+            Probabilistic prime test based on Solovay-Strassen (Euler Criterion)
+            </summary>
+            <param name="confidence"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.LucasStrongTest">
+            <summary>
+            Implementation of the Lucas Strong Pseudo Prime test.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.LucasStrongTestHelper(HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            LucasStrongTestHelper
+            </summary>
+            <param name="thisVal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.isProbablePrime(System.Int32)">
+            <summary>
+            Determines whether a number is probably prime, using the Rabin-Miller's
+            test.  Before applying the test, the number is tested for divisibility by primes less than 2000
+            </summary>
+            <param name="confidence"></param>
+            <returns> true if number is probably prime.</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.isProbablePrime">
+            <summary>
+            Determines whether this BigInteger is probably prime using a
+            combination of base 2 strong pseudoprime test and Lucas strong
+            pseudoprime test.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.IntValue">
+            <summary>
+            Returns the lowest 4 bytes of the BigInteger as an int.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.LongValue">
+            <summary>
+            Returns the lowest 8 bytes of the BigInteger as a long.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.Jacobi(HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Computes the Jacobi Symbol for a and b.
+            Algorithm adapted from [3] and [4] with some optimizations
+            </summary>
+            <param name="a"></param>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.genPseudoPrime(System.Int32,System.Int32,System.Random)">
+            <summary>
+            Generates a positive BigInteger that is probably prime.
+            </summary>
+            <param name="bits"></param>
+            <param name="confidence"></param>
+            <param name="rand"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.genCoPrime(System.Int32,System.Random)">
+            <summary>
+            Generates a random number with the specified number of bits such that gcd(number, this) = 1
+            </summary>
+            <param name="bits"></param>
+            <param name="rand"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.modInverse(HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+             Returns the modulo inverse of this.  Throws ArithmeticException if
+            the inverse does not exist.  (i.e. gcd(this, modulus) != 1)逆模
+            </summary>
+            <param name="modulus"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.getBytes">
+            <summary>
+            Returns the value of the BigInteger as a byte array.  The lowest index contains the MSB.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.setBit(System.UInt32)">
+            <summary>
+            Sets the value of the specified bit to 1
+            The Least Significant Bit position is 0.
+            </summary>
+            <param name="bitNum"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.unsetBit(System.UInt32)">
+            <summary>
+            Sets the value of the specified bit to 0
+            The Least Significant Bit position is 0.
+            </summary>
+            <param name="bitNum"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.sqrt">
+             <summary>
+             Returns a value that is equivalent to the integer square root
+             of the BigInteger.
+            
+             The integer square root of "this" is defined as the largest integer n
+             such that (n * n)  less than or equal to this
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.LucasSequence(HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger)">
+            <summary>
+            Returns the k_th number in the Lucas Sequence reduced modulo n.
+            </summary>
+            <param name="P"></param>
+            <param name="Q"></param>
+            <param name="k"></param>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.LucasSequenceHelper(HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger,HNAS.Framework4.Security.Cryptography.BigInteger,System.Int32)">
+             <summary>
+             Performs the calculation of the kth term in the Lucas Sequence.
+             For details of the algorithm, see reference [9].
+            
+             k must be odd.  i.e LSB == 1
+             </summary>
+             <param name="P"></param>
+             <param name="Q"></param>
+             <param name="k"></param>
+             <param name="n"></param>
+             <param name="constant"></param>
+             <param name="s"></param>
+             <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.MulDivTest(System.Int32)">
+            <summary>
+            Tests the correct implementation of the /, %, * and + operators
+            </summary>
+            <param name="rounds"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.RSATest(System.Int32)">
+            <summary>
+            Tests the correct implementation of the modulo exponential function
+            using RSA encryption and decryption (using pre-computed encryption and
+            decryption keys).
+            </summary>
+            <param name="rounds"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.RSATest2(System.Int32)">
+            <summary>
+            Tests the correct implementation of the modulo exponential and
+            inverse modulo functions using RSA encryption and decryption.  The two
+            pseudoprimes p and q are fixed, but the two RSA keys are generated
+            for each round of testing.
+            </summary>
+            <param name="rounds"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.SqrtTest(System.Int32)">
+            <summary>
+            Tests the correct implementation of sqrt() method.
+            </summary>
+            <param name="rounds"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.BigInteger.Main(System.String[])">
+            <summary>
+            main
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="T:HNAS.Framework4.Security.Cryptography.RSACryption">
+            <summary>
+            RSA加解密，RSA数字签名
+            </summary>
+            Copyright (c) 2012 海南海航航空信息系统有限公司
+            创 建 人：王宇（wang_yu5）
+            创建日期：2012年2月23日
+            修 改 人：
+            修改日期：
+            版 本：1.0
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSACryption.RSAKey(System.String@,System.String@)">
+            <summary>
+            产生私钥 和公钥
+            </summary>
+            <param name="strXMLKeys">私钥</param>
+            <param name="strXMLPublicKey">公钥</param>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSACryption.RSAEncrypt(System.String,System.String)">
+            <summary>
+            RSA加密
+            </summary>
+            <remarks>
+            密钥必须是XML的行式
+            该加密方式有长度限制
+            </remarks>
+            <param name="strXMLPublicKey">公钥</param>
+            <param name="strEncryptString">明文</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSACryption.RSAEncrypt(System.String,System.Byte[])">
+            <summary>
+            RSA加密
+            </summary>
+            <param name="strXMLPublicKey">公钥</param>
+            <param name="EncryptString">明文</param>
+            <returns>密文</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSACryption.RSADecrypt(System.String,System.String)">
+            <summary>
+            RSA解密
+            </summary>
+            <param name="strXMLPrivateKey">私钥</param>
+            <param name="m_strDecryptString">密文</param>
+            <returns>明文</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSACryption.RSADecrypt(System.String,System.Byte[])">
+            <summary>
+            RSA解密
+            </summary>
+            <param name="strXMLPrivateKey">私钥</param>
+            <param name="DecryptString">密文</param>
+            <returns>明文</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSACryption.GetHash(System.String,System.Byte[]@)">
+            <summary>
+            获取MD5值
+            </summary>
+            <param name="strSource">明文</param>
+            <param name="HashData">MD5值</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSACryption.GetHash(System.String,System.String@)">
+            <summary>
+            获取MD5值
+            </summary>
+            <param name="strSource">明文</param>
+            <param name="strHashData">MD5值</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSACryption.GetHash(System.IO.FileStream,System.Byte[]@)">
+            <summary>
+            获取文件MD5值
+            </summary>
+            <param name="objFile">文件</param>
+            <param name="HashData">MD5值</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSACryption.GetHash(System.IO.FileStream,System.String@)">
+            <summary>
+            获取MD5值
+            </summary>
+            <param name="objFile">文件</param>
+            <param name="strHashData">MD5值</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSACryption.SignatureFormatter(System.String,System.Byte[],System.Byte[]@)">
+            <summary>
+            RSA签名 
+            </summary>
+            <param name="strPrivateKey">私钥</param>
+            <param name="HashbyteSignature">签名</param>
+            <param name="EncryptedSignatureData">密文</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSACryption.SignatureFormatter(System.String,System.Byte[],System.String@)">
+            <summary>
+            RSA签名 
+            </summary>
+            <param name="strPrivateKey">私钥</param>
+            <param name="HashbyteSignature">签名</param>
+            <param name="strEncryptedSignatureData">密文</param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSACryption.SignatureFormatter(System.String,System.String,System.Byte[]@)">
+            <summary>
+            RSA签名 
+            </summary>
+            <param name="strPrivateKey">私钥</param>
+            <param name="strHashbyteSignature">签名</param>
+            <param name="EncryptedSignatureData">密文</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSACryption.SignatureFormatter(System.String,System.String,System.String@)">
+            <summary>
+            RSA签名 
+            </summary>
+            <param name="strPrivateKey">私钥</param>
+            <param name="strHashbyteSignature">签名</param>
+            <param name="strEncryptedSignatureData">密文</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSACryption.SignatureDeformatter(System.String,System.Byte[],System.Byte[])">
+            <summary>
+            RSA 签名验证
+            </summary>
+            <param name="strPublicKey">公钥</param>
+            <param name="HashbyteDeformatter">签名</param>
+            <param name="DeformatterData">明文</param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSACryption.SignatureDeformatter(System.String,System.String,System.Byte[])">
+            <summary>
+            RSA 签名验证
+            </summary>
+            <param name="strPublicKey">公钥</param>
+            <param name="strHashbyteDeformatter">签名</param>
+            <param name="DeformatterData">明文</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSACryption.SignatureDeformatter(System.String,System.Byte[],System.String)">
+            <summary>
+            RSA 签名验证
+            </summary>
+            <param name="strPublicKey">公钥</param>
+            <param name="HashbyteDeformatter">签名</param>
+            <param name="strDeformatterData">明文</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSACryption.SignatureDeformatter(System.String,System.String,System.String)">
+            <summary>
+            RSA 签名验证
+            </summary>
+            <param name="strPublicKey">公钥</param>
+            <param name="strHashbyteDeformatter">签名</param>
+            <param name="strDeformatterData">明文</param>
+            <returns>bool</returns>
+        </member>
+        <member name="T:HNAS.Framework4.Security.Cryptography.RSAEncrypt">
+            <summary>
+            RSA加解密实现类
+            </summary>
+            Copyright (c) 2012 海南海航航空信息系统有限公司
+            创 建 人：王宇（wang_yu5）
+            创建日期：2012年2月23日
+            修 改 人：
+            修改日期：
+            版 本：1.0
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSAEncrypt.EncryptPublicKey(System.String,System.String)">
+            <summary>
+            公钥加密字符串
+            </summary>
+            <param name="strSource">待加密字符串</param>
+            <param name="strPublicKeyPath">公钥存放路径</param>
+            <returns>加密结果base64编码</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSAEncrypt.EncryptPublicKeyByte(System.String,System.String)">
+            <summary>
+            公钥加密
+            </summary>
+            <param name="strSource">待加密字符串</param>
+            <param name="strPublicKeyPath">公钥存放路径</param>
+            <returns>加密结果</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSAEncrypt.DecryptPrivateKey(System.String,System.String)">
+            <summary>
+            私钥解密字符串
+            </summary>
+            <param name="strSource">待解密字符串（进行了base64编码的）</param>
+            <param name="strPrivateKeyPath">私钥存放路径</param>
+            <returns>解密结果</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSAEncrypt.DecryptPrivateKeyByte(System.Byte[],System.String)">
+            <summary>
+            私钥解密字符串
+            </summary>
+            <param name="dSource">待解密的字节数组</param>
+            <param name="strPrivateKeyPath">私钥存放路径</param>
+            <returns>解密结果</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSAEncrypt.EncryptString(System.String,System.String,System.String)">
+            <summary>
+            加密字符串
+            </summary>
+            <param name="strData">待加密字符串</param>
+            <param name="strkeyNum">密钥</param>
+            <param name="strnNum">modulus</param>
+            <returns>加密结果</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSAEncrypt.DecryptBytes(System.Byte[],System.String,System.String)">
+            <summary>
+            解密字符数组
+            </summary>
+            <param name="dataBytes">待解密字符数组</param>
+            <param name="strkeyNum">密钥</param>
+            <param name="strnNum">modulus</param>
+            <returns>解密结果</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSAEncrypt.SignMD5WithRSA(System.String,System.String)">
+            <summary>
+            签名
+            </summary>
+            <param name="strSource">需签名的字符串</param>
+            <param name="strPrivateKeyPath">私钥存放路径</param>
+            <returns>签名结果</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSAEncrypt.UnsignMD5WithRSA(System.String,System.String,System.String)">
+            <summary>
+            验证签名
+            </summary>
+            <param name="strSignData">已签名的数据</param>
+            <param name="strSource">原数据</param>
+            <param name="strPublicKeyPath">公钥存放路径</param>
+            <returns>true/false</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.RSAEncrypt.GetBytes(System.String)">
+            <summary>
+            将字符串转成字节数组
+            </summary>
+            <param name="num">需转换的字符串</param>
+            <returns>转换结果</returns>
+        </member>
+        <member name="T:HNAS.Framework4.Security.Cryptography.ServiceBase">
+            <summary>
+            ServiceBase 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.ServiceBase.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.ServiceBase.ValidateUsernameToken(HNAS.Framework4.Security.Cryptography.UsernameToken,System.String)">
+            <summary>
+            验证SOAP头信息
+            </summary>
+            <param name="usernameToken">SOAP头</param>
+            <param name="xmlParameter">参数</param>
+            <returns>验证结果</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.ServiceBase.GetParameter(System.Xml.XmlDocument,System.String)">
+            <summary>
+            获取参数值
+            </summary>
+            <param name="xd">xml参数</param>
+            <param name="nodeName">需要获取参数值的参数名</param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.ServiceBase.GetQueryCondition(System.String)">
+            <summary>
+            行过滤的特殊字符转换
+            </summary>
+            <param name="message">需转换的字符串</param>
+            <returns>转换后的字符串</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.ServiceBase.ValidatePara(System.String,System.String,System.String)">
+            <summary>
+            验证公共参数（列、开始时间、结束时间）
+            </summary>
+            <param name="columnFilter">行</param>
+            <param name="dStartDate">开始时间</param>
+            <param name="dEndDate">结束时间</param>
+            <returns>验证结果</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.ServiceBase.SqlFilter_Column(System.String)">
+            <summary>
+            ColumnFilter参数防sql注入
+            </summary>
+            <param name="strValue">需判断的字符串</param>
+            <returns>true 含有关键字</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Security.Cryptography.ServiceBase.SqlFilter_Row(System.String)">
+            <summary>
+            RowFilter参数防sql注入
+            </summary>
+            <param name="strValue">需判断的字符串</param>
+            <returns>true 含有关键字</returns>
+        </member>
+        <member name="T:HNAS.Framework4.Security.Cryptography.UsernameToken">
+            <summary>
+            SOAP验证类定义
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.Security.Cryptography.UsernameToken.Username">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.Security.Cryptography.UsernameToken.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.Security.Cryptography.UsernameToken.Expires">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.Security.Cryptography.UsernameToken.Nonce">
+            <summary>
+            随机数
+            </summary>
+        </member>
+    </members>
+</doc>

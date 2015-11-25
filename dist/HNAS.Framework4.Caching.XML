@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HNAS.Framework4.Caching</name>
+    </assembly>
+    <members>
+        <member name="T:HNAS.Framework4.Caching.CacheDep">
+            <summary>
+            缓存数据依赖类
+            </summary>
+             创 建 人：王好
+             创建日期：2011年12月14日
+             修 改 人：
+             修改日期：
+             Copyright (c) 2011 海南海航航空信息系统有限公司
+             版 本：1.0	
+        </member>
+        <member name="F:HNAS.Framework4.Caching.CacheDep.configurationSeparator">
+            <summary>
+            //分隔符
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.Caching.CacheDep.dependency">
+            <summary>
+            多项依赖对象
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.Caching.CacheDep.SetFileCache(System.String,System.Object,System.String)">
+            <summary>
+            设置文件依赖缓存
+            </summary>
+            <param name="cacheKey">索引值</param>
+            <param name="obj">缓存的对象</param>
+            <param name="fileNames">依赖文件逗号隔开</param>
+        </member>
+        <member name="M:HNAS.Framework4.Caching.CacheDep.GetDependency(System.String)">
+            <summary>
+            获取依赖项
+            </summary>
+            <param name="configKey"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Caching.CacheDep.GetCache(System.String)">
+            <summary>
+             获取当前应用程序指定CacheKey的Cache对象值
+            </summary>
+            <param name="CacheKey">索引键值</param>
+            <returns>返回缓存对象</returns>
+        </member>
+        <member name="T:HNAS.Framework4.Caching.SqlCacheDep">
+            <summary>
+            sql缓存依赖
+            </summary>
+             创 建 人：王好
+             创建日期：2011年12月14日
+             修 改 人：
+             修改日期：
+             Copyright (c) 2011 海南海航航空信息系统有限公司
+             版 本：1.0	
+        </member>
+        <member name="F:HNAS.Framework4.Caching.SqlCacheDep.dataBaseconstr">
+            <summary>
+            默认数据库连接
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.Caching.SqlCacheDep.#ctor">
+            <summary>
+            默认构造
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.Caching.SqlCacheDep.#ctor(System.String)">
+            <summary>
+            指定数据库连接字符串构造函数
+            </summary>
+            <param name="str"> 指定数据库连接字符</param>
+        </member>
+        <member name="M:HNAS.Framework4.Caching.SqlCacheDep.SetSqlCacheData(System.String,System.Object,System.String,System.String)">
+            <summary>
+            设置缓存
+            </summary>
+            <param name="CacheKey">索引值</param>
+            <param name="data">缓存的对象</param>
+            <param name="configKey">依赖key逗号隔开</param>
+            <param name="cacheDatabaseName">缓存依赖对应的数据库连接,默认值SqlCacheDepDB</param>  
+            <returns>缓存的对象</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Caching.SqlCacheDep.SetCache(System.String,System.Object,System.Web.Caching.AggregateCacheDependency)">
+            <summary>
+            设置以缓存依赖的方式缓存数据
+            </summary>
+            <param name="CacheKey">索引键值</param>
+            <param name="objObject">缓存对象</param>
+            <param name="dep">依赖对象</param>
+        </member>
+        <member name="M:HNAS.Framework4.Caching.SqlCacheDep.GetDependency(System.String,System.String)">
+            <summary>
+            获取依赖项
+            </summary>
+            <param name="cacheDatabaseName"></param>
+            <param name="configKey"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Caching.SqlCacheDep.SqlDependencyStart(System.String)">
+            <summary>
+            SQL 2005 //推荐将这段代码加到Global.asax的Application_Start方法中
+            </summary>
+            <param name="connectionStr"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Caching.SqlCacheDep.SqlDependencyStop(System.String)">
+            <summary>
+            推荐将这段代码加到Global.asax的Application_End方法中，
+            </summary>
+            <param name="connectionStr"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Caching.SqlCacheDep.EnableNotifications(System.String)">
+            <summary>
+             为特定数据库启用SqlCacheDependency对象更改通知
+            </summary>
+            <param name="connectionStr"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Caching.SqlCacheDep.DisableNotifications(System.String)">
+            <summary>
+             为特定数据库禁用 SqlCacheDependency对象更改通知
+            </summary>
+            <param name="connectionStr"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Caching.SqlCacheDep.EnableTableForNotifications(System.String,System.String)">
+            <summary>
+            为数据库中的特定表启用SqlCacheDependency对象更改通知
+            </summary>
+            <param name="tables">指定表</param>
+            <param name="connectionStr"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Caching.SqlCacheDep.DisableTableForNotifications(System.String,System.String)">
+             <summary>
+              为数据库中的特定表禁用SqlCacheDependency对象更改通知
+             </summary>
+            <param name="tables">指定表</param>
+             <param name="connectionStr"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Caching.SqlCacheDep.GetTablesEnabledForNotifications(System.String)">
+            <summary>
+              返回启用了SqlCacheDependency对象更改通知的所有表的列表
+            </summary>
+            <param name="connectionStr"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Caching.SqlCacheDep.GetDataBaseconstr(System.String)">
+            <summary>
+            获得连接字符串
+            </summary>
+            <param name="connectionStr"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

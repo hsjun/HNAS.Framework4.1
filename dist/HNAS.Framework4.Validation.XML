@@ -1,0 +1,2923 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HNAS.Framework4.Validation</name>
+    </assembly>
+    <members>
+        <member name="T:HNAS.Framework4.Validation.Configuration.DesignResources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.AddValidationSettings">
+            <summary>
+              查找类似 Add Validation Settings 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.AndCompositeValidatorDataDescription">
+             <summary>
+               查找类似 Provides the capability to create complex validation rules using a hierarchy of nested validators. 
+            This validator returns True only when all validators it contains return True for the validated type. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.AndCompositeValidatorDataDisplayName">
+            <summary>
+              查找类似 And Composite Validator 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.AndCompositeValidatorDataMessageTemplateDescription">
+             <summary>
+               查找类似 The template to use when creating the validation message. 
+            The template can contain placeholders for values exposed by the individual validation results for each member of the validated type.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.AndCompositeValidatorDataMessageTemplateDisplayName">
+            <summary>
+              查找类似 Message Template 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.AndCompositeValidatorDataMessageTemplateResourceNameDescription">
+            <summary>
+              查找类似 The key in an external resource file for the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.AndCompositeValidatorDataMessageTemplateResourceNameDisplayName">
+            <summary>
+              查找类似 Template Resource Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.AndCompositeValidatorDataMessageTemplateResourceTypeNameDescription">
+            <summary>
+              查找类似 The type of the external resource file containing the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.AndCompositeValidatorDataMessageTemplateResourceTypeNameDisplayName">
+            <summary>
+              查找类似 Template Resource Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.AndCompositeValidatorDataNameDescription">
+            <summary>
+              查找类似 The name of the And Composite Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.AndCompositeValidatorDataNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.AndCompositeValidatorDataTagDescription">
+             <summary>
+               查找类似 A user-supplied string value that can be used to identify or classify the validator. 
+            It can be accessed from code, and is typically used to sort or categorize the validation results.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.AndCompositeValidatorDataTagDisplayName">
+            <summary>
+              查找类似 Tag 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.AndCompositeValidatorDataTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of the And Composite Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.AndCompositeValidatorDataTypeNameDisplayName">
+            <summary>
+              查找类似 Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.AndCompositeValidatorDataValidatorsDescription">
+            <summary>
+              查找类似 The collection of validators nested within this validator, which must all return True for this validator to return True. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.AndCompositeValidatorDataValidatorsDisplayName">
+            <summary>
+              查找类似 Validators 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ContainsCharactersValidatorDataCharacterSetDescription">
+            <summary>
+              查找类似 The set of characters that may or must occur in the string to be validated. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ContainsCharactersValidatorDataCharacterSetDisplayName">
+            <summary>
+              查找类似 Character Set 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ContainsCharactersValidatorDataContainsCharactersDescription">
+             <summary>
+               查找类似 Determines how the validator checks for characters. 
+            &apos;Any&apos; (the default) means the value will be valid if it contains any of the characters defined for the Character Set. 
+            &apos;All&apos; means that the value must contain all of the characters defined for the Character Set. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ContainsCharactersValidatorDataContainsCharactersDisplayName">
+            <summary>
+              查找类似 Contains Characters 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ContainsCharactersValidatorDataDescription">
+            <summary>
+              查找类似 A validator that checks if a string value contains any or all of the characters specified for the Character Set property. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ContainsCharactersValidatorDataDisplayName">
+            <summary>
+              查找类似 Contains Characters Validator 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ContainsCharactersValidatorDataMessageTemplateDescription">
+             <summary>
+               查找类似 The template to use when creating the validation message. 
+            The template can contain placeholders for values exposed by the individual validation results for each member of the validated type.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ContainsCharactersValidatorDataMessageTemplateDisplayName">
+            <summary>
+              查找类似 Message Template 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ContainsCharactersValidatorDataMessageTemplateResourceNameDescription">
+            <summary>
+              查找类似 The key in an external resource file for the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ContainsCharactersValidatorDataMessageTemplateResourceNameDisplayName">
+            <summary>
+              查找类似 Template Resource Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ContainsCharactersValidatorDataMessageTemplateResourceTypeNameDescription">
+            <summary>
+              查找类似 The type of the external resource file containing the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ContainsCharactersValidatorDataMessageTemplateResourceTypeNameDisplayName">
+            <summary>
+              查找类似 Template Resource Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ContainsCharactersValidatorDataNameDescription">
+            <summary>
+              查找类似 The name of the Contains Characters Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ContainsCharactersValidatorDataNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ContainsCharactersValidatorDataNegatedDescription">
+             <summary>
+               查找类似 Reverses the validation behavior. 
+            When set to True, validation will fail (the validator will return False) if the validation rules are satisfied, instead of the default behavior of failing when they are not satisfied. 
+            The default is False. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ContainsCharactersValidatorDataNegatedDisplayName">
+            <summary>
+              查找类似 Negated 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ContainsCharactersValidatorDataTagDescription">
+             <summary>
+               查找类似 A user-supplied string value that can be used to identify or classify the validator. 
+            It can be accessed from code, and is typically used to sort or categorize the validation results.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ContainsCharactersValidatorDataTagDisplayName">
+            <summary>
+              查找类似 Tag 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ContainsCharactersValidatorDataTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of the Contains Characters Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ContainsCharactersValidatorDataTypeNameDisplayName">
+            <summary>
+              查找类似 Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.CustomValidatorDataAddCommand">
+            <summary>
+              查找类似 Custom Validator (using type picker) 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.CustomValidatorDataDescription">
+            <summary>
+              查找类似 Custom implementation of a Validator, added to the Validation Application Block. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.CustomValidatorDataDisplayName">
+            <summary>
+              查找类似 Custom Validator 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.CustomValidatorDataMessageTemplateDescription">
+             <summary>
+               查找类似 The template to use when creating the validation message. 
+            The template can contain placeholders for values exposed by the individual validation results for each member of the validated type.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.CustomValidatorDataMessageTemplateDisplayName">
+            <summary>
+              查找类似 Message Template 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.CustomValidatorDataMessageTemplateResourceNameDescription">
+            <summary>
+              查找类似 The key in an external resource file for the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.CustomValidatorDataMessageTemplateResourceNameDisplayName">
+            <summary>
+              查找类似 Template Resource Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.CustomValidatorDataMessageTemplateResourceTypeNameDescription">
+            <summary>
+              查找类似 The type of the external resource file containing the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.CustomValidatorDataMessageTemplateResourceTypeNameDisplayName">
+            <summary>
+              查找类似 Template Resource Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.CustomValidatorDataNameDescription">
+            <summary>
+              查找类似 The name of the Custom Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.CustomValidatorDataNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.CustomValidatorDataTagDescription">
+             <summary>
+               查找类似 A user-supplied string value that can be used to identify or classify the validator. 
+            It can be accessed from code, and is typically used to sort or categorize the validation results.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.CustomValidatorDataTagDisplayName">
+            <summary>
+              查找类似 Tag 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.CustomValidatorDataTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of the Custom Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.CustomValidatorDataTypeNameDisplayName">
+            <summary>
+              查找类似 Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataDescription">
+            <summary>
+              查找类似 A validator checks if a DateTime value falls within a specified range. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataDisplayName">
+            <summary>
+              查找类似 Date Range Validator 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataLowerBoundDescription">
+            <summary>
+              查找类似 The earliest date for which the value is valid. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataLowerBoundDisplayName">
+            <summary>
+              查找类似 Lower Bound 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataLowerBoundTypeDescription">
+             <summary>
+               查找类似 Determines how to evaluate the Lower Bound value. 
+            Ignore (the default) means that the validator ignores the Lower Bound value. 
+            Inclusive means that the validator allows values that are equal to the Lower Bound value. 
+            Exclusive means that the validator does not allow values that are equal to the Lower Bound value. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataLowerBoundTypeDisplayName">
+            <summary>
+              查找类似 Lower Bound Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataMessageTemplateDescription">
+             <summary>
+               查找类似 The template to use when creating the validation message. 
+            The template can contain placeholders for values exposed by the individual validation results for each member of the validated type.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataMessageTemplateDisplayName">
+            <summary>
+              查找类似 Message Template 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataMessageTemplateResourceNameDescription">
+            <summary>
+              查找类似 The key in an external resource file for the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataMessageTemplateResourceNameDisplayName">
+            <summary>
+              查找类似 Template Resource Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataMessageTemplateResourceTypeNameDescription">
+            <summary>
+              查找类似 The type of the external resource file containing the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataMessageTemplateResourceTypeNameDisplayName">
+            <summary>
+              查找类似 Template Resource Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataNameDescription">
+            <summary>
+              查找类似 The name of the Date Time Range Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataNegatedDescription">
+             <summary>
+               查找类似 Reverses the validation behavior. 
+            When set to True, validation will fail (the validator will return False) if the validation rules are satisfied, instead of the default behavior of failing when they are not satisfied. 
+            The default is False. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataNegatedDisplayName">
+            <summary>
+              查找类似 Negated 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataTagDescription">
+             <summary>
+               查找类似 A user-supplied string value that can be used to identify or classify the validator. 
+            It can be accessed from code, and is typically used to sort or categorize the validation results.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataTagDisplayName">
+            <summary>
+              查找类似 Tag 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of the Date Time Range Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataTypeNameDisplayName">
+            <summary>
+              查找类似 Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataUpperBoundDescription">
+            <summary>
+              查找类似 The latest date for which the value is valid. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataUpperBoundDisplayName">
+            <summary>
+              查找类似 Upper Bound 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataUpperBoundTypeDescription">
+             <summary>
+               查找类似 Determines how to evaluate the Upper Bound value. 
+            Ignore (the default) means that the validator ignores the Upper Bound value. 
+            Inclusive means that the validator allows values that are equal to the Upper Bound value. 
+            Exclusive means that the validator does not allow values that are equal to the Upper Bound value. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DateTimeRangeValidatorDataUpperBoundTypeDisplayName">
+            <summary>
+              查找类似 Upper Bound Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainConfigurationElementDescription">
+            <summary>
+              查找类似 An individual value within the domain of valid values. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainConfigurationElementDisplayName">
+            <summary>
+              查找类似 Domain Configuration Element 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainConfigurationElementNameDescription">
+            <summary>
+              查找类似 The name of the Domain Configuration Element. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainConfigurationElementNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainValidatorDataDescription">
+             <summary>
+               查找类似 A validator that checks if a value is one of the values in a specified set. 
+            For example, it can check that a name is &apos;Tom&apos;, &apos;Dick&apos;, &apos;Harry&apos;, or &apos;George&apos;; or that an integer is 2, 3, 5, 7, or 11. 
+            If the set only contains one value, this validator will effectively check for equality. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainValidatorDataDisplayName">
+            <summary>
+              查找类似 Domain Validator 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainValidatorDataDomainDescription">
+            <summary>
+              查找类似 The set of valid values that validator will compare the specified value against. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainValidatorDataDomainDisplayName">
+            <summary>
+              查找类似 Domain 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainValidatorDataMessageTemplateDescription">
+             <summary>
+               查找类似 The template to use when creating the validation message. 
+            The template can contain placeholders for values exposed by the individual validation results for each member of the validated type.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainValidatorDataMessageTemplateDisplayName">
+            <summary>
+              查找类似 Message Template 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainValidatorDataMessageTemplateResourceNameDescription">
+            <summary>
+              查找类似 The key in an external resource file for the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainValidatorDataMessageTemplateResourceNameDisplayName">
+            <summary>
+              查找类似 Template Resource Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainValidatorDataMessageTemplateResourceTypeNameDescription">
+            <summary>
+              查找类似 The type of the external resource file containing the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainValidatorDataMessageTemplateResourceTypeNameDisplayName">
+            <summary>
+              查找类似 Template Resource Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainValidatorDataNameDescription">
+            <summary>
+              查找类似 The name of the Domain Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainValidatorDataNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainValidatorDataNegatedDescription">
+             <summary>
+               查找类似 Reverses the validation behavior. 
+            When set to True, validation will fail (the validator will return False) if the validation rules are satisfied, instead of the default behavior of failing when they are not satisfied. 
+            The default is False. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainValidatorDataNegatedDisplayName">
+            <summary>
+              查找类似 Negated 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainValidatorDataTagDescription">
+             <summary>
+               查找类似 A user-supplied string value that can be used to identify or classify the validator. 
+            It can be accessed from code, and is typically used to sort or categorize the validation results.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainValidatorDataTagDisplayName">
+            <summary>
+              查找类似 Tag 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainValidatorDataTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of the Domain Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.DomainValidatorDataTypeNameDisplayName">
+            <summary>
+              查找类似 Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.EnumConversionValidatorDataDescription">
+             <summary>
+               查找类似 A validator that checks if a string value can be converted to a value in a specified enumeration. 
+            For example, it can check that &apos;Blue&apos; can be converted to a value in the Color enumeration. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.EnumConversionValidatorDataDisplayName">
+            <summary>
+              查找类似 Enum Conversion Validator 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.EnumConversionValidatorDataEnumTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of enumeration to check against. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.EnumConversionValidatorDataEnumTypeNameDisplayName">
+            <summary>
+              查找类似 Enumeration Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.EnumConversionValidatorDataMessageTemplateDescription">
+             <summary>
+               查找类似 The template to use when creating the validation message. 
+            The template can contain placeholders for values exposed by the individual validation results for each member of the validated type.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.EnumConversionValidatorDataMessageTemplateDisplayName">
+            <summary>
+              查找类似 Message Template 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.EnumConversionValidatorDataMessageTemplateResourceNameDescription">
+            <summary>
+              查找类似 The key in an external resource file for the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.EnumConversionValidatorDataMessageTemplateResourceNameDisplayName">
+            <summary>
+              查找类似 Template Resource Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.EnumConversionValidatorDataMessageTemplateResourceTypeNameDescription">
+            <summary>
+              查找类似 The type of the external resource file containing the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.EnumConversionValidatorDataMessageTemplateResourceTypeNameDisplayName">
+            <summary>
+              查找类似 Template Resource Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.EnumConversionValidatorDataNameDescription">
+            <summary>
+              查找类似 The name of the Enum Conversion Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.EnumConversionValidatorDataNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.EnumConversionValidatorDataNegatedDescription">
+             <summary>
+               查找类似 Reverses the validation behavior. 
+            When set to True, validation will fail (the validator will return False) if the validation rules are satisfied, instead of the default behavior of failing when they are not satisfied. 
+            The default is False. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.EnumConversionValidatorDataNegatedDisplayName">
+            <summary>
+              查找类似 Negated 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.EnumConversionValidatorDataTagDescription">
+             <summary>
+               查找类似 A user-supplied string value that can be used to identify or classify the validator. 
+            It can be accessed from code, and is typically used to sort or categorize the validation results.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.EnumConversionValidatorDataTagDisplayName">
+            <summary>
+              查找类似 Tag 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.EnumConversionValidatorDataTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of the Enum Conversion Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.EnumConversionValidatorDataTypeNameDisplayName">
+            <summary>
+              查找类似 Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.NotNullValidatorDataDescription">
+            <summary>
+              查找类似 A validator that checks that a value is not null (C#) or Nothing (Visual Basic). 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.NotNullValidatorDataDisplayName">
+            <summary>
+              查找类似 Not Null Validator 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.NotNullValidatorDataMessageTemplateDescription">
+             <summary>
+               查找类似 The template to use when creating the validation message. 
+            The template can contain placeholders for values exposed by the individual validation results for each member of the validated type. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.NotNullValidatorDataMessageTemplateDisplayName">
+            <summary>
+              查找类似 Message Template 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.NotNullValidatorDataMessageTemplateResourceNameDescription">
+            <summary>
+              查找类似 The key in an external resource file for the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.NotNullValidatorDataMessageTemplateResourceNameDisplayName">
+            <summary>
+              查找类似 Template Resource Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.NotNullValidatorDataMessageTemplateResourceTypeNameDescription">
+            <summary>
+              查找类似 The type of the external resource file containing the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.NotNullValidatorDataMessageTemplateResourceTypeNameDisplayName">
+            <summary>
+              查找类似 Template Resource Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.NotNullValidatorDataNameDescription">
+            <summary>
+              查找类似 The name of the Not Null Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.NotNullValidatorDataNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.NotNullValidatorDataNegatedDescription">
+             <summary>
+               查找类似 Reverses the validation behavior. 
+            When set to True, validation will fail (the validator will return False) if the validation rules are satisfied, instead of the default behavior of failing when they are not satisfied. 
+            The default is False. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.NotNullValidatorDataNegatedDisplayName">
+            <summary>
+              查找类似 Negated 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.NotNullValidatorDataTagDescription">
+             <summary>
+               查找类似 A user-supplied string value that can be used to identify or classify the validator. 
+            It can be accessed from code, and is typically used to sort or categorize the validation results.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.NotNullValidatorDataTagDisplayName">
+            <summary>
+              查找类似 Tag 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.NotNullValidatorDataTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of the Not Null Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.NotNullValidatorDataTypeNameDisplayName">
+            <summary>
+              查找类似 Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectCollectionValidatorDataDescription">
+             <summary>
+               查找类似 A validator that checks if the validated value is a collection of the specified type, and then invokes validation on each element of the collection. 
+            If the object to validate is null, validation is ignored. If the object to validate is not a collection, validation fails and self validation is not applied. 
+            If there are elements in the collection that are of a different type than the one specified for the Target Type, validation for these elements fails but this does not affect validation for the other el [字符串的其余部分被截断]&quot;; 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectCollectionValidatorDataDisplayName">
+            <summary>
+              查找类似 Object Collection Validator 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectCollectionValidatorDataMessageTemplateDescription">
+             <summary>
+               查找类似 The template to use when creating the validation message. 
+            The template can contain placeholders for values exposed by the individual validation results for each member of the validated type.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectCollectionValidatorDataMessageTemplateDisplayName">
+            <summary>
+              查找类似 Message Template 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectCollectionValidatorDataMessageTemplateResourceNameDescription">
+            <summary>
+              查找类似 The key in an external resource file for the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectCollectionValidatorDataMessageTemplateResourceNameDisplayName">
+            <summary>
+              查找类似 Template Resource Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectCollectionValidatorDataMessageTemplateResourceTypeNameDescription">
+            <summary>
+              查找类似 The type of the external resource file containing the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectCollectionValidatorDataMessageTemplateResourceTypeNameDisplayName">
+            <summary>
+              查找类似 Template Resource Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectCollectionValidatorDataNameDescription">
+            <summary>
+              查找类似 The name of the Object Collection Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectCollectionValidatorDataNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectCollectionValidatorDataTagDescription">
+             <summary>
+               查找类似 A user-supplied string value that can be used to identify or classify the validator. 
+            It can be accessed from code, and is typically used to sort or categorize the validation results.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectCollectionValidatorDataTagDisplayName">
+            <summary>
+              查找类似 Tag 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectCollectionValidatorDataTargetRulesetDescription">
+            <summary>
+              查找类似  The name of the rule set that will be applied to each element in the collection. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectCollectionValidatorDataTargetRulesetDisplayName">
+            <summary>
+              查找类似 Target Ruleset 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectCollectionValidatorDataTargetTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of the collection to validate. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectCollectionValidatorDataTargetTypeNameDisplayName">
+            <summary>
+              查找类似 Target Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectCollectionValidatorDataTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of the Object Collection Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectCollectionValidatorDataTypeNameDisplayName">
+            <summary>
+              查找类似 Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectValidatorDataDescription">
+             <summary>
+               查找类似 A validator that causes validation to occur on a referenced object. 
+            All validators defined for that type will be invoked as if the Validate method had been called on the object. 
+            If the object to validate is null, validation is ignored. 
+            If the reference is to an instance of a type that is not compatible with the configured target type, validation fails. 
+            This validator is useful for validating tree-structured data. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectValidatorDataDisplayName">
+            <summary>
+              查找类似 Object Validator 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectValidatorDataMessageTemplateDescription">
+             <summary>
+               查找类似 The template to use when creating the validation message. 
+            The template can contain placeholders for values exposed by the individual validation results for each member of the validated type.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectValidatorDataMessageTemplateDisplayName">
+            <summary>
+              查找类似 Message Template 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectValidatorDataMessageTemplateResourceNameDescription">
+            <summary>
+              查找类似 The key in an external resource file for the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectValidatorDataMessageTemplateResourceNameDisplayName">
+            <summary>
+              查找类似 Template Resource Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectValidatorDataMessageTemplateResourceTypeNameDescription">
+            <summary>
+              查找类似 The type of the external resource file containing the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectValidatorDataMessageTemplateResourceTypeNameDisplayName">
+            <summary>
+              查找类似 Template Resource Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectValidatorDataNameDescription">
+            <summary>
+              查找类似 The name of the Object Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectValidatorDataNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectValidatorDataTagDescription">
+             <summary>
+               查找类似 A user-supplied string value that can be used to identify or classify the validator. 
+            It can be accessed from code, and is typically used to sort or categorize the validation results.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectValidatorDataTagDisplayName">
+            <summary>
+              查找类似 Tag 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectValidatorDataTargetRulesetDescription">
+            <summary>
+              查找类似  The name of the rule set to apply to the target object. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectValidatorDataTargetRulesetDisplayName">
+            <summary>
+              查找类似 Target Ruleset 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectValidatorDataTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of the Object Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectValidatorDataTypeNameDisplayName">
+            <summary>
+              查找类似 Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectValidatorDataValidateActualTypeDescription">
+            <summary>
+              查找类似 A flag indicating whether the value should be validated using the rules for its runtime type, not its static type. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ObjectValidatorDataValidateActualTypeDisplayName">
+            <summary>
+              查找类似 Validate actual type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.OrCompositeValidatorDataDescription">
+             <summary>
+               查找类似 Provides the capability to create complex validation rules using a hierarchy of nested validators. 
+            This validator returns True when any of the validators it contains returns True for the validated type. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.OrCompositeValidatorDataDisplayName">
+            <summary>
+              查找类似 Or Composite Validator 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.OrCompositeValidatorDataMessageTemplateDescription">
+             <summary>
+               查找类似 The template to use when creating the validation message. 
+            The template can contain placeholders for values exposed by the individual validation results for each member of the validated type.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.OrCompositeValidatorDataMessageTemplateDisplayName">
+            <summary>
+              查找类似 Message Template 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.OrCompositeValidatorDataMessageTemplateResourceNameDescription">
+            <summary>
+              查找类似 The key in an external resource file for the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.OrCompositeValidatorDataMessageTemplateResourceNameDisplayName">
+            <summary>
+              查找类似 Template Resource Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.OrCompositeValidatorDataMessageTemplateResourceTypeNameDescription">
+            <summary>
+              查找类似 The type of the external resource file containing the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.OrCompositeValidatorDataMessageTemplateResourceTypeNameDisplayName">
+            <summary>
+              查找类似 Template Resource Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.OrCompositeValidatorDataNameDescription">
+            <summary>
+              查找类似 The name of the Or Composite Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.OrCompositeValidatorDataNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.OrCompositeValidatorDataTagDescription">
+             <summary>
+               查找类似 A user-supplied string value that can be used to identify or classify the validator. 
+            It can be accessed from code, and is typically used to sort or categorize the validation results.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.OrCompositeValidatorDataTagDisplayName">
+            <summary>
+              查找类似 Tag 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.OrCompositeValidatorDataTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of the Or Composite Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.OrCompositeValidatorDataTypeNameDisplayName">
+            <summary>
+              查找类似 Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.OrCompositeValidatorDataValidatorsDescription">
+            <summary>
+              查找类似 The collection of validators nested within this validator, any one of which can return True for this validator to return True. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.OrCompositeValidatorDataValidatorsDisplayName">
+            <summary>
+              查找类似 Validators 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.PropertyComparisonValidatorDataComparisonOperatorDescription">
+             <summary>
+               查找类似 Determines how the two values are compared. 
+            The comparisons available are Equal, NotEqual, GreaterThan, GreaterThanEqual, LessThan, and LessThanEqual. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.PropertyComparisonValidatorDataComparisonOperatorDisplayName">
+            <summary>
+              查找类似 Comparison Operator 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.PropertyComparisonValidatorDataDescription">
+            <summary>
+              查找类似 A validator that compares the value to be validated with the value of a specified property of the type being validated. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.PropertyComparisonValidatorDataDisplayName">
+            <summary>
+              查找类似 Property Comparison Validator 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.PropertyComparisonValidatorDataMessageTemplateDescription">
+             <summary>
+               查找类似 The template to use when creating the validation message. 
+            The template can contain placeholders for values exposed by the individual validation results for each member of the validated type.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.PropertyComparisonValidatorDataMessageTemplateDisplayName">
+            <summary>
+              查找类似 Message Template 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.PropertyComparisonValidatorDataMessageTemplateResourceNameDescription">
+            <summary>
+              查找类似 The key in an external resource file for the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.PropertyComparisonValidatorDataMessageTemplateResourceNameDisplayName">
+            <summary>
+              查找类似 Template Resource Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.PropertyComparisonValidatorDataMessageTemplateResourceTypeNameDescription">
+            <summary>
+              查找类似 The type of the external resource file containing the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.PropertyComparisonValidatorDataMessageTemplateResourceTypeNameDisplayName">
+            <summary>
+              查找类似 Template Resource Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.PropertyComparisonValidatorDataNameDescription">
+            <summary>
+              查找类似 The name of the Property Comparison Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.PropertyComparisonValidatorDataNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.PropertyComparisonValidatorDataNegatedDescription">
+             <summary>
+               查找类似 Reverses the validation behavior. When set to True, validation will fail (the validator will return False) 
+            if the validation rules are satisfied, instead of the default behavior of failing when they are not satisfied. The default is False. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.PropertyComparisonValidatorDataNegatedDisplayName">
+            <summary>
+              查找类似 Negated 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.PropertyComparisonValidatorDataPropertyToCompareDescription">
+            <summary>
+              查找类似 The name of the property of the type being validated that will be compared with the value to validate. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.PropertyComparisonValidatorDataPropertyToCompareDisplayName">
+            <summary>
+              查找类似 Property To Compare 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.PropertyComparisonValidatorDataTagDescription">
+             <summary>
+               查找类似 A user-supplied string value that can be used to identify or classify the validator. 
+            It can be accessed from code, and is typically used to sort or categorize the validation results.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.PropertyComparisonValidatorDataTagDisplayName">
+            <summary>
+              查找类似 Tag 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.PropertyComparisonValidatorDataTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of the Property Comparison Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.PropertyComparisonValidatorDataTypeNameDisplayName">
+            <summary>
+              查找类似 Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataCultureDescription">
+            <summary>
+              查找类似 The culture which is used to deserialized the Lower Bound and Upper Bound values. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataCultureDisplayName">
+            <summary>
+              查找类似 Culture 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataDescription">
+             <summary>
+               查找类似 A validator that checks if a value falls within a specified range. 
+            The range may be closed (it has both a lower and an upper bound specified), or open (it only has one bound specified). 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataDescription1">
+             <summary>
+               查找类似 A validator that checks if a value falls within a specified range. 
+            The range may be closed (it has both a lower and an upper bound specified), or open (it only has one bound specified). 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataDisplayName">
+            <summary>
+              查找类似 Range Validator 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataDisplayName1">
+            <summary>
+              查找类似 Generic Range Validator 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataLowerBoundDescription">
+            <summary>
+              查找类似 The lower bound for the value being validated. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataLowerBoundDescription1">
+            <summary>
+              查找类似 The lower bound for the value being validated. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataLowerBoundDisplayName">
+            <summary>
+              查找类似 Lower Bound 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataLowerBoundDisplayName1">
+            <summary>
+              查找类似 Lower Bound 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataLowerBoundTypeDescription">
+             <summary>
+               查找类似 Determines how to evaluate the Lower Bound value. 
+            Ignore (the default) means that the validator ignores the Lower Bound value. Inclusive means that the validator allows values that are equal to the Lower Bound value. 
+            Exclusive means that the validator does not allow values that are equal to the Lower Bound value. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataLowerBoundTypeDescription1">
+             <summary>
+               查找类似 Determines how to evaluate the Lower Bound value. 
+            Ignore (the default) means that the validator ignores the Lower Bound value. Inclusive means that the validator allows values that are equal to the Lower Bound value. 
+            Exclusive means that the validator does not allow values that are equal to the Lower Bound value. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataLowerBoundTypeDisplayName">
+            <summary>
+              查找类似 Lower Bound Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataLowerBoundTypeDisplayName1">
+            <summary>
+              查找类似 Lower Bound Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataMessageTemplateDescription">
+             <summary>
+               查找类似 The template to use when creating the validation message. 
+            The template can contain placeholders for values exposed by the individual validation results for each member of the validated type.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataMessageTemplateDescription1">
+             <summary>
+               查找类似 The template to use when creating the validation message. 
+            The template can contain placeholders for values exposed by the individual validation results for each member of the validated type.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataMessageTemplateDisplayName">
+            <summary>
+              查找类似 Message Template 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataMessageTemplateDisplayName1">
+            <summary>
+              查找类似 Message Template 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataMessageTemplateResourceNameDescription">
+            <summary>
+              查找类似 The key in an external resource file for the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataMessageTemplateResourceNameDescription1">
+            <summary>
+              查找类似 The key in an external resource file for the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataMessageTemplateResourceNameDisplayName">
+            <summary>
+              查找类似 Template Resource Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataMessageTemplateResourceNameDisplayName1">
+            <summary>
+              查找类似 Template Resource Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataMessageTemplateResourceTypeNameDescription">
+            <summary>
+              查找类似 The type of the external resource file containing the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataMessageTemplateResourceTypeNameDescription1">
+            <summary>
+              查找类似 The type of the external resource file containing the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataMessageTemplateResourceTypeNameDisplayName">
+            <summary>
+              查找类似 Template Resource Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataMessageTemplateResourceTypeNameDisplayName1">
+            <summary>
+              查找类似 Template Resource Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataNameDescription">
+            <summary>
+              查找类似 The name of the Range Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataNameDescription1">
+            <summary>
+              查找类似 The name of the Range Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataNameDisplayName1">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataNegatedDescription">
+             <summary>
+               查找类似 Reverses the validation behavior. When set to True, validation will fail (the validator will return False) 
+            if the validation rules are satisfied, instead of the default behavior of failing when they are not satisfied. 
+            The default is False. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataNegatedDescription1">
+             <summary>
+               查找类似 Reverses the validation behavior. When set to True, validation will fail (the validator will return False) 
+            if the validation rules are satisfied, instead of the default behavior of failing when they are not satisfied. 
+            The default is False. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataNegatedDisplayName">
+            <summary>
+              查找类似 Negated 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataNegatedDisplayName1">
+            <summary>
+              查找类似 Negated 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataTagDescription">
+             <summary>
+               查找类似 A user-supplied string value that can be used to identify or classify the validator. 
+            It can be accessed from code, and is typically used to sort or categorize the validation results.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataTagDescription1">
+             <summary>
+               查找类似 A user-supplied string value that can be used to identify or classify the validator. 
+            It can be accessed from code, and is typically used to sort or categorize the validation results.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataTagDisplayName">
+            <summary>
+              查找类似 Tag 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataTagDisplayName1">
+            <summary>
+              查找类似 Tag 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of the Range Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataTypeNameDescription1">
+            <summary>
+              查找类似 The fully qualified type name of the Range Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataTypeNameDisplayName">
+            <summary>
+              查找类似 Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataTypeNameDisplayName1">
+            <summary>
+              查找类似 Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataUpperBoundDescription">
+            <summary>
+              查找类似 The upper bound for the value being validated. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataUpperBoundDescription1">
+            <summary>
+              查找类似 The upper bound for the value being validated. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataUpperBoundDisplayName">
+            <summary>
+              查找类似 Upper Bound 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataUpperBoundDisplayName1">
+            <summary>
+              查找类似 Upper Bound 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataUpperBoundTypeDescription">
+             <summary>
+               查找类似 Determines how to evaluate the Upper Bound value. 
+            Ignore (the default) means that the validator ignores the Upper Bound value.
+            Inclusive means that the validator allows values that are equal to the Upper Bound value. 
+            Exclusive means that the validator does not allow values that are equal to the Upper Bound value. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataUpperBoundTypeDescription1">
+             <summary>
+               查找类似 Determines how to evaluate the Upper Bound value. 
+            Ignore (the default) means that the validator ignores the Upper Bound value. 
+            Inclusive means that the validator allows values that are equal to the Upper Bound value. 
+            Exclusive means that the validator does not allow values that are equal to the Upper Bound value. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataUpperBoundTypeDisplayName">
+            <summary>
+              查找类似 Upper Bound Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RangeValidatorDataUpperBoundTypeDisplayName1">
+            <summary>
+              查找类似 Upper Bound Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataDescription">
+            <summary>
+              查找类似 A validator that checks if the value matches the pattern specified by a regular expression. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataDisplayName">
+            <summary>
+              查找类似 Regular Expression Validator 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataMessageTemplateDescription">
+             <summary>
+               查找类似 The template to use when creating the validation message. 
+            The template can contain placeholders for values exposed by the individual validation results for each member of the validated type.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataMessageTemplateDisplayName">
+            <summary>
+              查找类似 Message Template 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataMessageTemplateResourceNameDescription">
+            <summary>
+              查找类似 The key in an external resource file for the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataMessageTemplateResourceNameDisplayName">
+            <summary>
+              查找类似 Template Resource Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataMessageTemplateResourceTypeNameDescription">
+            <summary>
+              查找类似 The type of the external resource file containing the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataMessageTemplateResourceTypeNameDisplayName">
+            <summary>
+              查找类似 Template Resource Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataNameDescription">
+            <summary>
+              查找类似 The name of the Regular Expression Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataNegatedDescription">
+             <summary>
+               查找类似 Reverses the validation behavior. 
+            When set to True, validation will fail (the validator will return False) if the validation rules are satisfied, instead of the default behavior of failing when they are not satisfied. The default is False. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataNegatedDisplayName">
+            <summary>
+              查找类似 Negated 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataOptionsDescription">
+             <summary>
+               查找类似 The RegEx options to apply when validating a pattern. 
+            Possible values are None (the default), IgnoreCase, Multiline, ExplicitCapture, Compiled, Singleline, IgnorePatternWhiteSpace, and RightToLeft. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataOptionsDisplayName">
+            <summary>
+              查找类似 Options 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataPatternDescription">
+            <summary>
+              查找类似 The regular expression or pattern to use to validate the value. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataPatternDisplayName">
+            <summary>
+              查找类似 Regular Expression 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataPatternResourceNameDescription">
+            <summary>
+              查找类似 The key in an external resource file for the localized string to use as the regular expression.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataPatternResourceNameDisplayName">
+            <summary>
+              查找类似 RegEx Resource Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataPatternResourceTypeNameDescription">
+            <summary>
+              查找类似 The type of the external resource file containing the localized string to use as the regular expression.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataPatternResourceTypeNameDisplayName">
+            <summary>
+              查找类似 RegEx Resource Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataTagDescription">
+             <summary>
+               查找类似 A user-supplied string value that can be used to identify or classify the validator. 
+            It can be accessed from code, and is typically used to sort or categorize the validation results.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataTagDisplayName">
+            <summary>
+              查找类似 Tag 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of the Regular Expression Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RegexValidatorDataTypeNameDisplayName">
+            <summary>
+              查找类似 Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataDescription">
+            <summary>
+              查找类似 A validator that checks if a DateTime value falls within a specified range using relative times and dates.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataDisplayName">
+            <summary>
+              查找类似 Relative Date Time Validator 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataLowerBoundDescription">
+             <summary>
+               查找类似 The number of a specific unit of time (such as days) before the date being validated. 
+            The result is the minimum valid date and time. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataLowerBoundDisplayName">
+            <summary>
+              查找类似 Lower Bound 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataLowerBoundTypeDescription">
+             <summary>
+               查找类似 Determines how to evaluate the Lower Bound value. 
+            Ignore (the default) means that the validator ignores the Lower Bound value. 
+            Inclusive means that the validator allows values that are equal to the Lower Bound value. 
+            Exclusive means that the validator does not allow values that are equal to the Lower Bound value. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataLowerBoundTypeDisplayName">
+            <summary>
+              查找类似 Lower Bound Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataLowerUnitDescription">
+             <summary>
+               查找类似 The unit of time to use when calculating the Lower Bound value. 
+            Possible values are None (the default), Second, Minute, Hour, Day, Month, and Year. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataLowerUnitDisplayName">
+            <summary>
+              查找类似 Lower Bound Unit 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataMessageTemplateDescription">
+             <summary>
+               查找类似 The template to use when creating the validation message. 
+            The template can contain placeholders for values exposed by the individual validation results for each member of the validated type.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataMessageTemplateDisplayName">
+            <summary>
+              查找类似 Message Template 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataMessageTemplateResourceNameDescription">
+            <summary>
+              查找类似 The key in an external resource file for the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataMessageTemplateResourceNameDisplayName">
+            <summary>
+              查找类似 Template Resource Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataMessageTemplateResourceTypeNameDescription">
+            <summary>
+              查找类似 The type of the external resource file containing the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataMessageTemplateResourceTypeNameDisplayName">
+            <summary>
+              查找类似 Template Resource Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataNameDescription">
+            <summary>
+              查找类似 The name of the Relative Date Time Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataNegatedDescription">
+             <summary>
+               查找类似 Reverses the validation behavior. When set to True, validation will fail (the validator will return False) 
+            if the validation rules are satisfied, instead of the default behavior of failing when they are not satisfied. The default is False. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataNegatedDisplayName">
+            <summary>
+              查找类似 Negated 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataTagDescription">
+             <summary>
+               查找类似 A user-supplied string value that can be used to identify or classify the validator. 
+            It can be accessed from code, and is typically used to sort or categorize the validation results.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataTagDisplayName">
+            <summary>
+              查找类似 Tag 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of the Relative Date Time Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataTypeNameDisplayName">
+            <summary>
+              查找类似 Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataUpperBoundDescription">
+             <summary>
+               查找类似 The number of a specific unit of time (such as days) after the date being validated. 
+            The result is the maximum valid date and time. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataUpperBoundDisplayName">
+            <summary>
+              查找类似 Upper Bound 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataUpperBoundTypeDescription">
+             <summary>
+               查找类似 Determines how to evaluate the Upper Bound value. 
+            Ignore (the default) means that the validator ignores the Upper Bound value. Inclusive means that the validator allows values that are equal to the Upper Bound value. 
+            Exclusive means that the validator does not allow values that are equal to the Upper Bound value. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataUpperBoundTypeDisplayName">
+            <summary>
+              查找类似 Upper Bound Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataUpperUnitDescription">
+            <summary>
+              查找类似 The unit of time to use when calculating the Upper Bound value. Possible values are None (the default), Second, Minute, Hour, Day, Month, and Year. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.RelativeDateTimeValidatorDataUpperUnitDisplayName">
+            <summary>
+              查找类似 Upper Bound Unit 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataDescription">
+             <summary>
+               查找类似 A validator that checks the length of the string is within a specified range. 
+            The range may include or exclude the range endpoints by setting the lower or upper bounds and the types of these bounds. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataDisplayName">
+            <summary>
+              查找类似 String Length Validator 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataLowerBoundDescription">
+            <summary>
+              查找类似 The minimum length of the validated string value. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataLowerBoundDisplayName">
+            <summary>
+              查找类似 Lower Bound 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataLowerBoundTypeDescription">
+             <summary>
+               查找类似 Determines how to evaluate the Lower Bound value. 
+            Ignore (the default) means that the validator ignores the Lower Bound value.
+            Inclusive means that the validator allows values that are equal to the Lower Bound value. 
+            Exclusive means that the validator does not allow values that are equal to the Lower Bound value. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataLowerBoundTypeDisplayName">
+            <summary>
+              查找类似 Lower Bound Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataMessageTemplateDescription">
+             <summary>
+               查找类似 The template to use when creating the validation message. 
+            The template can contain placeholders for values exposed by the individual validation results for each member of the validated type.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataMessageTemplateDisplayName">
+            <summary>
+              查找类似 Message Template 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataMessageTemplateResourceNameDescription">
+            <summary>
+              查找类似 The key in an external resource file for the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataMessageTemplateResourceNameDisplayName">
+            <summary>
+              查找类似 Template Resource Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataMessageTemplateResourceTypeNameDescription">
+            <summary>
+              查找类似 The type of the external resource file containing the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataMessageTemplateResourceTypeNameDisplayName">
+            <summary>
+              查找类似 Template Resource Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataNameDescription">
+            <summary>
+              查找类似 The name of the String Length Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataNegatedDescription">
+             <summary>
+               查找类似 Reverses the validation behavior. 
+            When set to True, validation will fail (the validator will return False) if the validation rules are satisfied, instead of the default behavior of failing when they are not satisfied. 
+            The default is False. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataNegatedDisplayName">
+            <summary>
+              查找类似 Negated 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataTagDescription">
+             <summary>
+               查找类似 A user-supplied string value that can be used to identify or classify the validator. 
+            It can be accessed from code, and is typically used to sort or categorize the validation results.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataTagDisplayName">
+            <summary>
+              查找类似 Tag 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of the String Length Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataTypeNameDisplayName">
+            <summary>
+              查找类似 Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataUpperBoundDescription">
+            <summary>
+              查找类似 The maximum length of the validated string value. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataUpperBoundDisplayName">
+            <summary>
+              查找类似 Upper Bound 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataUpperBoundTypeDescription">
+             <summary>
+               查找类似 Determines how to evaluate the Upper Bound value. 
+            Ignore (the default) means that the validator ignores the Upper Bound value. 
+            Inclusive means that the validator allows values that are equal to the Upper Bound value. 
+            Exclusive means that the validator does not allow values that are equal to the Upper Bound value. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.StringLengthValidatorDataUpperBoundTypeDisplayName">
+            <summary>
+              查找类似 Upper Bound Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.TypeConversionValidatorDataDescription">
+             <summary>
+               查找类似 A validator that checks if a string can be converted to a specific type. 
+            For example, the validator can check that &apos;6.32&apos; can be converted to a Double type or that &apos;2007-02-09&apos; can be converted to a DateTime type. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.TypeConversionValidatorDataDisplayName">
+            <summary>
+              查找类似 Type Conversion Validator 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.TypeConversionValidatorDataMessageTemplateDescription">
+             <summary>
+               查找类似 The template to use when creating the validation message. 
+            The template can contain placeholders for values exposed by the individual validation results for each member of the validated type.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.TypeConversionValidatorDataMessageTemplateDisplayName">
+            <summary>
+              查找类似 Message Template 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.TypeConversionValidatorDataMessageTemplateResourceNameDescription">
+            <summary>
+              查找类似 The key in an external resource file for the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.TypeConversionValidatorDataMessageTemplateResourceNameDisplayName">
+            <summary>
+              查找类似 Template Resource Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.TypeConversionValidatorDataMessageTemplateResourceTypeNameDescription">
+            <summary>
+              查找类似 The type of the external resource file containing the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.TypeConversionValidatorDataMessageTemplateResourceTypeNameDisplayName">
+            <summary>
+              查找类似 Template Resource Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.TypeConversionValidatorDataNameDescription">
+            <summary>
+              查找类似 The name of the Type Conversion Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.TypeConversionValidatorDataNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.TypeConversionValidatorDataNegatedDescription">
+             <summary>
+               查找类似 Reverses the validation behavior. 
+            When set to True, validation will fail (the validator will return False) if the validation rules are satisfied, instead of the default behavior of failing when they are not satisfied. The default is False. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.TypeConversionValidatorDataNegatedDisplayName">
+            <summary>
+              查找类似 Negated 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.TypeConversionValidatorDataTagDescription">
+             <summary>
+               查找类似 A user-supplied string value that can be used to identify or classify the validator. 
+            It can be accessed from code, and is typically used to sort or categorize the validation results.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.TypeConversionValidatorDataTagDisplayName">
+            <summary>
+              查找类似 Tag 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.TypeConversionValidatorDataTargetTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of the type to test conversion to. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.TypeConversionValidatorDataTargetTypeNameDisplayName">
+            <summary>
+              查找类似 Target Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.TypeConversionValidatorDataTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of the Type Conversion Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.TypeConversionValidatorDataTypeNameDisplayName">
+            <summary>
+              查找类似 Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedFieldReferenceCollectionDescription">
+            <summary>
+              查找类似 The collection of fields being validated for this type. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedFieldReferenceCollectionDisplayName">
+            <summary>
+              查找类似 Validated Field Reference Collection 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedFieldReferenceDescription">
+            <summary>
+              查找类似 A field within the type that will be validated by this rule set. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedFieldReferenceDisplayName">
+            <summary>
+              查找类似 Field To Validate 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedFieldReferenceNameDescription">
+            <summary>
+              查找类似 The name of the Validated Field Reference. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedFieldReferenceNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedFieldReferenceValidatorsDescription">
+            <summary>
+              查找类似 The collection of validators configured for this field of the type being validated. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedFieldReferenceValidatorsDisplayName">
+            <summary>
+              查找类似 Validators 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedMemberReferenceDescription">
+            <summary>
+              查找类似 A member of the type that will be validated. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedMemberReferenceDisplayName">
+            <summary>
+              查找类似 Validated Member 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedMemberReferenceNameDescription">
+            <summary>
+              查找类似 The name of the Validated Member. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedMemberReferenceNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedMemberReferenceValidatorsDescription">
+            <summary>
+              查找类似 The collection of validators configured for the member of the type being validated. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedMemberReferenceValidatorsDisplayName">
+            <summary>
+              查找类似 Validators 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedMethodReferenceCollectionDescription">
+            <summary>
+              查找类似 The collection of methods being validated for this type. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedMethodReferenceCollectionDisplayName">
+            <summary>
+              查找类似 Validated Method Reference Collection 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedMethodReferenceDescription">
+            <summary>
+              查找类似 A method within the type whose return value will be validated by this rule set. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedMethodReferenceDisplayName">
+            <summary>
+              查找类似 Method To Validate 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedMethodReferenceNameDescription">
+            <summary>
+              查找类似 The name of the method to validate. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedMethodReferenceNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedMethodReferenceValidatorsDescription">
+            <summary>
+              查找类似 The collection of validators configured for this method of the type being validated. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedMethodReferenceValidatorsDisplayName">
+            <summary>
+              查找类似 Validators 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedPropertyReferenceCollectionDescription">
+            <summary>
+              查找类似 The collection of properties being validated for this type. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedPropertyReferenceCollectionDisplayName">
+            <summary>
+              查找类似 Validated Property Reference Collection 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedPropertyReferenceDescription">
+            <summary>
+              查找类似 A property within the type whose value will be validated by this rule set. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedPropertyReferenceDisplayName">
+            <summary>
+              查找类似 Property To Validate 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedPropertyReferenceNameDescription">
+            <summary>
+              查找类似 The name of the property to validate. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedPropertyReferenceNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedPropertyReferenceValidatorsDescription">
+            <summary>
+              查找类似 The collection of validators configured for this property of the type being validated. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedPropertyReferenceValidatorsDisplayName">
+            <summary>
+              查找类似 Validators 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedTypeReferenceAssemblyNameDescription">
+            <summary>
+              查找类似 Used to resolve the reference type at design time. This property is ignored at runtime. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedTypeReferenceAssemblyNameDisplayName">
+            <summary>
+              查找类似 Assembly Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedTypeReferenceCollectionDescription">
+            <summary>
+              查找类似 The collection of validation rulesets configured this type. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedTypeReferenceCollectionDisplayName">
+            <summary>
+              查找类似 Validated Type Reference Collection 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedTypeReferenceDefaultRulesetDescription">
+            <summary>
+              查找类似 The Ruleset to use when validating the type when code does not specify the name of a configured Ruleset. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedTypeReferenceDefaultRulesetDisplayName">
+            <summary>
+              查找类似 Default Ruleset 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedTypeReferenceDescription">
+            <summary>
+              查找类似 The class or type whose members will be validated by the Validation Application Block 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedTypeReferenceDisplayName">
+            <summary>
+              查找类似 Type To Validate 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedTypeReferenceNameDescription">
+            <summary>
+              查找类似 The name of the type to be validated. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedTypeReferenceNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedTypeReferenceRulesetsDescription">
+            <summary>
+              查找类似 The collection of validation rulesets configured this type. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatedTypeReferenceRulesetsDisplayName">
+            <summary>
+              查找类似 Rule Sets 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationCallHandlerDataDescription">
+             <summary>
+               查找类似 A Call Handler that provides the capability to test whether the value provided for the selected property, or the values specified for the parameters of the selected method, are valid against specific rules. 
+            This handler uses the Validation Application Block to perform the validation. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationCallHandlerDataDisplayName">
+            <summary>
+              查找类似 Validation Call Handler 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationCallHandlerDataNameDescription">
+            <summary>
+              查找类似 The name of the Validation Call Handler. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationCallHandlerDataNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationCallHandlerDataOrderDescription">
+             <summary>
+               查找类似 The position of the handler within the policy handler chain, starting from 1. 
+            The default value is zero, which means that there is no explicit order specified for the handler in relation to other handlers in the same handler chain. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationCallHandlerDataOrderDisplayName">
+            <summary>
+              查找类似 Order 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationCallHandlerDataRuleSetDescription">
+             <summary>
+               查找类似 The name of the rule set to use for all target object types, as configured in the Validation Application Block. 
+            An empty string causes the handler to use the default rule set. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationCallHandlerDataRuleSetDisplayName">
+            <summary>
+              查找类似 Rule Set 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationCallHandlerDataSpecificationSourceDescription">
+             <summary>
+               查找类似 A value from the SpecificationSource enumeration that defines the locations where the handler will look for validation rules. 
+            Valid values are Attributes, Configuration, ParameterAttributesOnly, and Both. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationCallHandlerDataSpecificationSourceDisplayName">
+            <summary>
+              查找类似 Rule Source 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationCallHandlerDataTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of the Validation Call Handler. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationCallHandlerDataTypeNameDisplayName">
+            <summary>
+              查找类似 Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationRulesetDataCollectionDescription">
+            <summary>
+              查找类似 A collection of validated properties. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationRulesetDataCollectionDisplayName">
+            <summary>
+              查找类似 Validation Ruleset Data Collection 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationRulesetDataDescription">
+            <summary>
+              查找类似 A set of validation rules to apply when validating instances of this type. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationRulesetDataDisplayName">
+            <summary>
+              查找类似 Validation Ruleset 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationRulesetDataFieldsDescription">
+            <summary>
+              查找类似 The collection of fields that will be validated within the type that owns this ruleset. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationRulesetDataFieldsDisplayName">
+            <summary>
+              查找类似 Fields 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationRulesetDataMethodsDescription">
+            <summary>
+              查找类似 The collection of methods whose return values will be validated within the type that owns this ruleset. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationRulesetDataMethodsDisplayName">
+            <summary>
+              查找类似 Methods 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationRulesetDataNameDescription">
+            <summary>
+              查找类似 The name of the Validation Ruleset. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationRulesetDataNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationRulesetDataPropertiesDescription">
+            <summary>
+              查找类似 The collection of properties that will be validated within the type that owns this ruleset. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationRulesetDataPropertiesDisplayName">
+            <summary>
+              查找类似 Properties 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationRulesetDataValidatorsDescription">
+            <summary>
+              查找类似 The collection of validators defined for the type that owns this ruleset. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationRulesetDataValidatorsDisplayName">
+            <summary>
+              查找类似 Validators 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationSettingsDescription">
+            <summary>
+              查找类似 Configuration settings for the Validation Application Block. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationSettingsDisplayName">
+            <summary>
+              查找类似 Validation Settings 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationSettingsTypesDescription">
+            <summary>
+              查找类似 The types or classes whose members will be validated by the rules sets defined in the configuration. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidationSettingsTypesDisplayName">
+            <summary>
+              查找类似 Validated Types 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatorDataCollectionDescription">
+            <summary>
+              查找类似 A collection of validators. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatorDataCollectionDisplayName">
+            <summary>
+              查找类似 Validator Data Collection 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatorDataDescription">
+            <summary>
+              查找类似 Base class for all Validators. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatorDataDisplayName">
+            <summary>
+              查找类似 Validator 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatorDataMessageTemplateDescription">
+             <summary>
+               查找类似 The template to use when creating the validation message. 
+            The template can contain placeholders for values exposed by the individual validation results for each member of the validated type.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatorDataMessageTemplateDisplayName">
+            <summary>
+              查找类似 Message Template 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatorDataMessageTemplateResourceNameDescription">
+            <summary>
+              查找类似 The key in an external resource file for the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatorDataMessageTemplateResourceNameDisplayName">
+            <summary>
+              查找类似 Template Resource Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatorDataMessageTemplateResourceTypeNameDescription">
+            <summary>
+              查找类似 The type of the external resource file containing the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatorDataMessageTemplateResourceTypeNameDisplayName">
+            <summary>
+              查找类似 Template Resource Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatorDataNameDescription">
+            <summary>
+              查找类似 The name of the Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatorDataNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatorDataTagDescription">
+             <summary>
+               查找类似 A user-supplied string value that can be used to identify or classify the validator. 
+            It can be accessed from code, and is typically used to sort or categorize the validation results.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatorDataTagDisplayName">
+            <summary>
+              查找类似 Tag 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatorDataTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of the Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValidatorDataTypeNameDisplayName">
+            <summary>
+              查找类似 Type Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValueValidatorDataDescription">
+            <summary>
+              查找类似 A Validator that validates against defined values. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValueValidatorDataDisplayName">
+            <summary>
+              查找类似 Value Validator 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValueValidatorDataMessageTemplateDescription">
+             <summary>
+               查找类似 The template to use when creating the validation message. 
+            The template can contain placeholders for values exposed by the individual validation results for each member of the validated type.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValueValidatorDataMessageTemplateDisplayName">
+            <summary>
+              查找类似 Message Template 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValueValidatorDataMessageTemplateResourceNameDescription">
+            <summary>
+              查找类似 The key in an external resource file for the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValueValidatorDataMessageTemplateResourceNameDisplayName">
+            <summary>
+              查找类似 Template Resource Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValueValidatorDataMessageTemplateResourceTypeNameDescription">
+            <summary>
+              查找类似 The type of the external resource file containing the localized string to use as the validation message.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValueValidatorDataMessageTemplateResourceTypeNameDisplayName">
+            <summary>
+              查找类似 Template Resource Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValueValidatorDataNameDescription">
+            <summary>
+              查找类似 The name of the Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValueValidatorDataNameDisplayName">
+            <summary>
+              查找类似 Name 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValueValidatorDataNegatedDescription">
+             <summary>
+               查找类似 Reverses the validation behavior. 
+            When set to True, validation will fail (the validator will return False) if the validation rules are satisfied, instead of the default behavior of failing when they are not satisfied. The default is False. 的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValueValidatorDataNegatedDisplayName">
+            <summary>
+              查找类似 Negated 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValueValidatorDataTagDescription">
+             <summary>
+               查找类似 A user-supplied string value that can be used to identify or classify the validator. 
+            It can be accessed from code, and is typically used to sort or categorize the validation results.  的本地化字符串。
+             </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValueValidatorDataTagDisplayName">
+            <summary>
+              查找类似 Tag 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValueValidatorDataTypeNameDescription">
+            <summary>
+              查找类似 The fully qualified type name of the Validator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Configuration.DesignResources.ValueValidatorDataTypeNameDisplayName">
+            <summary>
+              查找类似 Type 的本地化字符串。
+            </summary>
+        </member>
+        <member name="T:HNAS.Framework4.Validation.Configuration.EmailValidatorData">
+            <summary>
+            Configuration object to describe an instance of class <see cref="T:HNAS.Framework4.Validation.Configuration.EmailValidatorData"/>.
+            </summary>
+            Copyright (c) 2011 海航航空信息系统有限公司
+            创 建 人：王宇(wang_yu5)
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+            版 本：1.0
+        </member>
+        <member name="M:HNAS.Framework4.Validation.Configuration.EmailValidatorData.#ctor">
+            <summary>
+            Email验证配置类
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.Validation.Configuration.EmailValidatorData.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Validation.Configuration.EmailValidatorData.DoCreateValidator(System.Type)">
+            <summary>
+            创建Email验证器
+            </summary>
+            <param name="targetType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HNAS.Framework4.Validation.Properties.Resources">
+            <summary>
+              一个强类型的资源类，用于查找本地化的字符串等。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ResourceManager">
+            <summary>
+              返回此类使用的缓存的 ResourceManager 实例。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.Culture">
+            <summary>
+              使用此强类型资源类，为所有资源查找
+              重写当前线程的 CurrentUICulture 属性。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.BlockName">
+            <summary>
+              查找类似 Enterprise Library Validation Application Block 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ConfigurationErrorMessage">
+            <summary>
+              查找类似 Errors reading configuration for Enterprise Library Validation Application Block 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ContainsCharactersNegatedDefaultMessageTemplate">
+            <summary>
+              查找类似 The value must not contain the characters in &quot;{3}&quot; with mode &quot;{4}&quot;. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ContainsCharactersNonNegatedDefaultMessageTemplate">
+            <summary>
+              查找类似 The value must contain the characters in &quot;{3}&quot; with mode &quot;{4}&quot;.  的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.DomainNegatedDefaultMessageTemplate">
+            <summary>
+              查找类似 The value must not belong to the domain. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.DomainNonNegatedDefaultMessageTemplate">
+            <summary>
+              查找类似 The value does not belong to the domain. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.EmailDefaultMessageTemplate">
+            <summary>
+              查找类似 The value must match Email format. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.EnumConversionNegatedDefaultMessageTemplate">
+            <summary>
+              查找类似 The value must not be defined in the &quot;{3}&quot; enum type. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.EnumConversionNonNegatedDefaultMessageTemplate">
+            <summary>
+              查找类似 The value must be defined in the &quot;{3}&quot; enum type. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ErrorCannotPerfomDefaultConversion">
+            <summary>
+              查找类似 The supplied value could not be converted to the target property type. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ErrorValueAccessInvalidType">
+            <summary>
+              查找类似 The value for &quot;{0}&quot; could not be accessed from an instance of &quot;{1}&quot;. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ErrorValueAccessNull">
+            <summary>
+              查找类似 The value for &quot;{0}&quot; could not be accessed from null. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionAttemptedValueAccessForInstanceOfInvalidType">
+            <summary>
+              查找类似 Attempted to retrieve value from instance of wrong type. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionBoundTypeNotIComparable">
+            <summary>
+              查找类似 The supplied bound type is not compatible with IComparable. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionCannotConvertBound">
+            <summary>
+              查找类似 The string representing the bound value could not be converted to the bound type. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionCannotIgnoreBothBoundariesInRange">
+            <summary>
+              查找类似 At most one range bound can be ignored. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionCannotSetResourceBasedMessageTemplatesIfTemplateIsSet">
+            <summary>
+              查找类似 A message template has been set already, resource based message templates are not allowed. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionCannotSetResourceMessageTemplatesIfResourceTemplateIsSet">
+            <summary>
+              查找类似 A message template resource has been set already; template override is not allowed. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionContainsNullElements">
+            <summary>
+              查找类似 Enumerable contains null elements. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionIntegrationValidatedPropertyNameNotAvailable">
+            <summary>
+              查找类似 The property name required to retrieve validation information for integration is not found. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionIntegrationValidatedPropertyNotExists">
+            <summary>
+              查找类似 The property name required to retrieve validation information for integration is invalid or does not belong to a public property. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionIntegrationValidatedPropertyNotReadable">
+            <summary>
+              查找类似 The property name required to retrieve validation information for integration refers to nonreadable property. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionIntegrationValidatedTypeNotAvailable">
+            <summary>
+              查找类似 The type required to retrieve validation information for integration is not found. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionInvalidDate">
+            <summary>
+              查找类似 The supplied string is not a valid date representation. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionInvalidField">
+            <summary>
+              查找类似 The field &quot;{0}&quot; on type &quot;{1}&quot; is either missing or non public. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionInvalidMethod">
+            <summary>
+              查找类似 The method &quot;{0}&quot; on type &quot;{1}&quot; is either missing, non public, void or has parameters. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionInvalidProperty">
+            <summary>
+              查找类似 The property &quot;{0}&quot; on type &quot;{1}&quot; is either missing, non public or read-only. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionInvalidTargetType">
+            <summary>
+              查找类似 Value to validate is not of the expected type: expected {0} but got {1} instead. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionLowerBoundNull">
+            <summary>
+              查找类似 The lower bound cannot be null unless it&apos;s type is Ingore. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionMethodHasNoReturnValue">
+            <summary>
+              查找类似 Method to access value does not have a return value. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionMethodHasParameters">
+            <summary>
+              查找类似 Method to access value has parameters. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionObjectCollectionValidatorDataTargetTypeNotSet">
+            <summary>
+              查找类似 The target element type has not been set in the configuration. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionPartiallyDefinedResourceForMessageTemplate">
+            <summary>
+              查找类似 Both resource name and resource type must be defined to retrieve the message template. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionPropertyNotFound">
+            <summary>
+              查找类似 The source property to request validators from does not exist. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionPropertyNotReadable">
+            <summary>
+              查找类似 The source property to request validators from is not readable. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionPropertyToCompareNotFound">
+            <summary>
+              查找类似 No public readable property with name &quot;{0}&quot; could be found for type &quot;{1}&quot;. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionPropertyToCompareNull">
+            <summary>
+              查找类似 The name for the property to compare is null for PropertyComparisonValidator. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionSelfValidationMethodWithInvalidSignature">
+            <summary>
+              查找类似 The self validation method has an invalid signature. It should be &quot;void [method name](ValidationResults)&quot;. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionShouldNotCall">
+            <summary>
+              查找类似 This method should not have been called. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionTypeNotFound">
+            <summary>
+              查找类似 The source type to request validators from has not been found. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionTypeOfBoundsMustMatch">
+            <summary>
+              查找类似 Range bounds must have the same type. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionUpperBoundLowerThanLowerBound">
+            <summary>
+              查找类似 Upper bound cannot be lower than lower bound. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionUpperBoundNull">
+            <summary>
+              查找类似 The upper bound cannot be null unless it&apos;s type is Ingore. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionValidatingNullOnValueType">
+            <summary>
+              查找类似 Value to validate is null but expected an instance of the non-reference type {0}. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ExceptionValidationAttributeNotSupported">
+            <summary>
+              查找类似 A validation attribute of type {0} cannot be used to validate values. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.IgnoreNullsDefaultMessageTemplate">
+            <summary>
+              查找类似 The value is not null and failed all its validation rules for key &quot;{1}&quot;. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.IllegalUseOfInjectionValidationSource">
+            <summary>
+              查找类似 The InjectionValidationSource may only be used to configure generic Enterprise Library validator classes. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.IllegalUseOfValidationDependencyAttribute">
+            <summary>
+              查找类似 The ValidationDependencyAttribute was applied to a dependency of type {0}, which is a generic Enterprise Library validator class. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.InvalidValidationSpecificationSource">
+            <summary>
+              查找类似 The Validation Specification Source {0} is invalid. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.InvariantCultureCannotBeUsedToDeserializeConfiguration">
+            <summary>
+              查找类似 InvariantCulture cannot be used to deserialize configuration. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.MustImplementOperation">
+            <summary>
+              查找类似 The operation must be implemented by a subclass. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.NonNullNegatedValidatorDefaultMessageTemplate">
+            <summary>
+              查找类似 The value must be null. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.NonNullNonNegatedValidatorDefaultMessageTemplate">
+            <summary>
+              查找类似 The value cannot be null. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ObjectCollectionValidatorIncompatibleElementInTargetCollection">
+            <summary>
+              查找类似 The element in the validated collection is not compatible with the expected type. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ObjectCollectionValidatorTargetNotCollection">
+            <summary>
+              查找类似 The supplied object is not a collection. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ObjectValidatorInvalidTargetType">
+            <summary>
+              查找类似 The supplied object is not compatible with the expected type. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.OrCompositeValidatorDefaultMessageTemplate">
+            <summary>
+              查找类似 All validators failed for key &quot;{1}&quot;. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.RangeValidatorNegatedDefaultMessageTemplate">
+            <summary>
+              查找类似 The value must not fall within the range &quot;{3}&quot; ({4}) - &quot;{5}&quot; ({6}). 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.RangeValidatorNonNegatedDefaultMessageTemplate">
+            <summary>
+              查找类似 The value must fall within the range &quot;{3}&quot; ({4}) - &quot;{5}&quot; ({6}). 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.RegexValidatorNegatedDefaultMessageTemplate">
+            <summary>
+              查找类似 The value must not match the regular expression &quot;{3}&quot; with options &quot;{4}&quot;. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.RegexValidatorNonNegatedDefaultMessageTemplate">
+            <summary>
+              查找类似 The value must match the regular expression &quot;{3}&quot; with options &quot;{4}&quot;. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.RelativeDateTimeNegatedDefaultMessageTemplate">
+            <summary>
+              查找类似 The value must not fall within the range &quot;{3}&quot; ({4}) - &quot;{5}&quot; ({6}) relative to now. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.RelativeDateTimeNonNegatedDefaultMessageTemplate">
+            <summary>
+              查找类似 The value must fall within the range &quot;{3}&quot; ({4}) - &quot;{5}&quot; ({6}) relative to now. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.RelativeDateTimeValidatorNotValidDateTimeUnit">
+            <summary>
+              查找类似 It&apos;s not possible to specify a None DateTime unit if a BoundaryType different from Ignore is used. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.SelfValidationMethodThrownMessage">
+            <summary>
+              查找类似 The self validation method thrown an exception while evaluating. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.SelfValidationValidatorMessage">
+            <summary>
+              查找类似 The reference provided to the self validation method is either null or references an instance of a non-compatible type. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.StringLengthValidatorNegatedDefaultMessageTemplate">
+            <summary>
+              查找类似 The length of the value must not fall within the range &quot;{3}&quot; ({4}) - &quot;{5}&quot; ({6}). 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.StringLengthValidatorNonNegatedDefaultMessageTemplate">
+            <summary>
+              查找类似 The length of the value must fall within the range &quot;{3}&quot; ({4}) - &quot;{5}&quot; ({6}). 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.TypeConversionNegatedDefaultMessageTemplate">
+            <summary>
+              查找类似 The value must not be convertible to type &quot;{3}&quot;. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.TypeConversionNonNegatedDefaultMessageTemplate">
+            <summary>
+              查找类似 The value must be convertible to type &quot;{3}&quot;. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ValidationAttributeFailed">
+            <summary>
+              查找类似 Validation using {0} threw an exception: {1} 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ValidationFailedMessage">
+            <summary>
+              查找类似 Parameter validation failed 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ValidationResultsHeader">
+            <summary>
+              查找类似 Validation results: 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ValidationResultTemplate">
+            <summary>
+              查找类似     Result: {0} Message: {1} 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ValidationResultWithKeyTemplate">
+            <summary>
+              查找类似     Result: {0} Key: {2} Message: {1} 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ValueAccessComparisonValidatorFailureToRetrieveComparand">
+            <summary>
+              查找类似 Failure to retrieve comparand for key &quot;{0}&quot;: {1}. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ValueAccessComparisonValidatorNegatedDefaultMessageTemplate">
+            <summary>
+              查找类似 The value should not have succeeded in the comparison with value for key &quot;{4}&quot; using operator &quot;{5}&quot;. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ValueAccessComparisonValidatorNonNegatedDefaultMessageTemplate">
+            <summary>
+              查找类似 The value failed the comparison with value for key &quot;{4}&quot; using operator &quot;{5}&quot;. 的本地化字符串。
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Properties.Resources.ValueValidatorDefaultMessageTemplate">
+            <summary>
+              查找类似 Value Validator 的本地化字符串。
+            </summary>
+        </member>
+        <member name="T:HNAS.Framework4.Validation.Validators.BaseClass`1">
+            <summary>
+            用于验证的基类
+            </summary>
+            <typeparam name="T">实体类型</typeparam>
+            Copyright (c) 2011 海航航空信息系统有限公司
+            创 建 人：王宇(wang_yu5)
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+            版 本：1.0
+        </member>
+        <member name="M:HNAS.Framework4.Validation.Validators.BaseClass`1.IsValid">
+            <summary>
+            根据验证配置返回验证结果
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Validators.BaseClass`1.ValidateResults">
+            <summary>
+            验证结果
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Validators.BaseClass`1.ValidateTag">
+            <summary>
+            验证结果
+            </summary>
+        </member>
+        <member name="T:HNAS.Framework4.Validation.Validators.EmailValidator">
+            <summary>
+            Email 验证器.
+            </summary>
+            Copyright (c) 2011 海航航空信息系统有限公司
+            创 建 人：王宇(wang_yu5)
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+            版 本：1.0
+        </member>
+        <member name="M:HNAS.Framework4.Validation.Validators.EmailValidator.#ctor(System.String)">
+            <summary>
+            <para>Initializes a new instance of the EmalValidator</para>
+            </summary>
+            <param name="tag"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Validation.Validators.EmailValidator.DoValidate(System.String,System.Object,System.String,Microsoft.Practices.EnterpriseLibrary.Validation.ValidationResults)">
+            <summary>
+            应用验证，存入验证结果到validationResults。
+            </summary>
+            <param name="objectToValidate"></param>
+            <param name="currentTarget"></param>
+            <param name="key"></param>
+            <param name="validationResults"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Validation.Validators.EmailValidator.GetMessage(System.Object,System.String)">
+            <summary>
+            获取验证失败消息。
+            Gets the message representing a failed validation.
+            </summary>
+            <param name="objectToValidate">The object for which validation was performed.</param>
+            <param name="key">The key representing the value being validated for <paramref name="objectToValidate"/>.</param>
+            <returns>The message representing the validation failure.</returns>
+        </member>
+        <member name="P:HNAS.Framework4.Validation.Validators.EmailValidator.DefaultMessageTemplate">
+            <summary>
+            DefaultMessageTemplate
+            </summary>
+        </member>
+        <member name="T:HNAS.Framework4.Validation.Validators.EmailValidatorAttribute">
+            <summary>
+            Email格式验证
+            Represents a <see cref="T:Microsoft.Practices.EnterpriseLibrary.Validation.Validators.RegexValidator"/>.
+            </summary>
+            Copyright (c) 2011 海航航空信息系统有限公司
+            创 建 人：王宇(wang_yu5)
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+            版 本：1.0
+        </member>
+        <member name="M:HNAS.Framework4.Validation.Validators.EmailValidatorAttribute.DoCreateValidator(System.Type)">
+            <summary>
+            创建Email验证器
+            </summary>
+            <param name="targetType"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,960 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HNAS.Framework4.WebCommon</name>
+    </assembly>
+    <members>
+        <member name="T:HNAS.Framework4.WebCommon.AlertMsn">
+            <summary>
+            提示窗口类
+            </summary>
+            Copyright (c) 2012 海航航空信息系统有限公司
+            创 建 人：王宇
+            创建日期：2012-2-20
+            修 改 人：
+            修改日期：
+            版 本：1.0
+        </member>
+        <member name="F:HNAS.Framework4.WebCommon.AlertMsn.strDefaultMsg">
+            <summary>
+            默认提示消息
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.AlertMsn.ConfirmMsg(System.Boolean,System.String,System.String,System.Web.UI.Page)">
+            <summary>
+            弹出确认消息
+            </summary>
+            <param name="bIfSuccess">操作成功标识，true跳转，false后退</param>
+            <param name="strMessage">消息体</param>
+            <param name="strSuccessUrl">成功后跳转页面地址</param>
+            <param name="page">所属窗体页（默认当前页）</param>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.AlertMsn.PopMsn(System.String,System.String,System.Web.UI.Page)">
+            <summary>
+            弹出消息
+            </summary>
+            <param name="strMessage">消息体</param>
+            <param name="strRedirectUrl">跳转地址</param>
+            <param name="page">所属窗体页（默认当前页）</param>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.AlertMsn.PopMsn_Close(System.String,System.Boolean,System.Web.UI.Page)">
+            <summary>
+            弹出消息后关闭
+            </summary>
+            <param name="strMessage">消息体</param>
+            <param name="bIsParentReload">是否刷新父页面</param>
+            <param name="page">所属窗体页（默认当前页）</param>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.AlertMsn.Redirect(System.Boolean,System.String,System.String,System.String,System.Web.UI.Page)">
+            <summary>
+            页面跳转
+            </summary>
+            <param name="bIfSuccess">操作成功标识</param>
+            <param name="strMessage">消息体</param>
+            <param name="strSuccessUrl">成功跳转地址</param>
+            <param name="strErrorUrl">失败跳转地址</param>
+            <param name="page">所属窗体页（默认当前页）</param>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.AlertMsn.RedirectPermanent(System.String,System.Web.UI.Page)">
+            <summary>
+            永久重定向
+            </summary>
+            <param name="strUrl">消息体</param>
+            <param name="page">所属窗体页（默认当前页）</param>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.AlertMsn.RegisterScript(System.String,System.Boolean,System.Web.UI.Page)">
+            <summary>
+            注册脚本
+            </summary>
+            <param name="strScript">脚本</param>
+            <param name="addScriptTags">标识（设置为true则不需添加<script></script>）</param>
+            <param name="page">所属窗体页（默认当前页）</param>
+        </member>
+        <member name="T:HNAS.Framework4.WebCommon.ArgumentAssertion">
+            <summary>
+            参数判断
+            </summary>
+            Copyright (c) 2012 海航航空信息系统有限公司
+            创 建 人：王宇
+            创建日期：2012-2-20
+            修 改 人：
+            修改日期：
+            版 本：1.0
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.ArgumentAssertion.IsIntanceOfType(System.String,System.Object,System.Type)">
+            <summary>
+            初始化验证
+            </summary>
+            <param name="argumentName"></param>
+            <param name="argumentValue"></param>
+            <param name="targetType"></param>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.ArgumentAssertion.IsIntanceOfType(System.String,System.Object,System.Type,System.String)">
+            <summary>
+            初始化验证
+            </summary>
+            <param name="argumentName"></param>
+            <param name="argumentValue"></param>
+            <param name="targetType"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.ArgumentAssertion.IsNotNull(System.String,System.Object)">
+            <summary>
+            非空验证
+            </summary>
+            <param name="argumentName"></param>
+            <param name="argumentValue"></param>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.ArgumentAssertion.IsNotNull(System.String,System.Object,System.String)">
+            <summary>
+            非空验证
+            </summary>
+            <param name="argumentName"></param>
+            <param name="argumentValue"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.ArgumentAssertion.StringIsNotEmpty(System.String,System.String)">
+            <summary>
+            非空验证
+            </summary>
+            <param name="argumentName"></param>
+            <param name="argumentValue"></param>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.ArgumentAssertion.StringIsNotEmpty(System.String,System.String,System.String)">
+            <summary>
+            非空验证
+            </summary>
+            <param name="argumentName"></param>
+            <param name="argumentValue"></param>
+            <param name="message"></param>
+        </member>
+        <member name="T:HNAS.Framework4.WebCommon.ChineseNum">
+            <summary>
+            本类实现阿拉伯数字到大写中文的转换
+            该类没有对非法数字进行判别,请事先自己判断数字是否合法
+            </summary>
+            Copyright (c) 2012 海航航空信息系统有限公司
+            创 建 人：王宇
+            创建日期：2012-2-20
+            修 改 人：
+            修改日期：
+            版 本：1.0
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.ChineseNum.GetChineseNum(System.String)">
+            <summary>
+            小写转大写
+            </summary>
+            <param name="p_num"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.ChineseNum.GetUpperMoney(System.Double)">
+            <summary>
+            小写金额转大写金额
+            </summary>
+            <param name="p_Money"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.ChineseNum.CharToNum(System.Char)">
+            <summary>
+            转换数字
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.ChineseNum.WanStrToInt(System.String)">
+            <summary>
+            转换万以下整数
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.ChineseNum.StrToInt(System.String)">
+            <summary>
+            转换整数
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.ChineseNum.StrToDouble(System.String)">
+            <summary>
+            转换小数
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.ChineseNum.NumToChn(System.String)">
+            <summary>
+            小写转大写
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.ChineseNum.GetMoneyChinese(System.Double)">
+            <summary>
+            金额转换
+            </summary>
+            <param name="Money"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.ChineseNum.NumstrToChinese(System.String)">
+            <summary>
+            金额转换
+            </summary>
+            <param name="numstr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HNAS.Framework4.WebCommon.CookieExtension">
+            <summary>
+            用于方便使用Cookie的扩展工具类
+            </summary>
+            Copyright (c) 2011 海航航空信息系统有限公司
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2012年2月22日
+            修 改 人：
+            修改日期：
+            版 本：1.0
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.CookieExtension.GetString(System.Web.HttpCookie)">
+            <summary>
+            从一个Cookie中读取字符串值。
+            </summary>
+            <param name="cookie"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.CookieExtension.ToInt(System.Web.HttpCookie,System.Int32)">
+            <summary>
+            从一个Cookie中读取 Int 值。
+            </summary>
+            <param name="cookie"></param>
+            <param name="defaultVal"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.CookieExtension.ConverTo``1(System.Web.HttpCookie)">
+            <summary>
+            从一个Cookie中读取值并转成指定的类型
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="cookie"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.CookieExtension.WriteCookie(System.Object,System.String,System.Nullable{System.DateTime})">
+            <summary>
+            将一个对象写入到Cookie
+            </summary>
+            <param name="obj"></param>
+            <param name="strName"></param>
+            <param name="expries"></param>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.CookieExtension.ClearCookie(System.String)">
+            <summary>
+            删除指定的Cookie
+            </summary>
+            <param name="strName"></param>
+        </member>
+        <member name="T:HNAS.Framework4.WebCommon.EscapeString">
+            <summary>
+            转义字符串类
+            </summary>
+            Copyright (c) 2012 海航航空信息系统有限公司
+            创 建 人：王宇
+            创建日期：2012-2-20
+            修 改 人：
+            修改日期：
+            版 本：1.0
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.EscapeString.ArraySplit(System.String[],System.String)">
+            <summary>
+            根据分隔符组合字符串
+            </summary>
+            <param name="strCode"></param>
+            <param name="strTag">分隔符</param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.EscapeString.StringSplit(System.String,System.String)">
+            <summary>
+            分隔字符串
+            </summary>
+            <param name="strCode"></param>
+            <param name="strTag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.EscapeString.DisplayText(System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="outputString"></param>
+            <param name="bIsToConvertSingleQuote"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.EscapeString.ImportText(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            字符转义
+            </summary>
+            <param name="importString"></param>
+            <param name="bIsTitle"></param>
+            <param name="bIsToConvertSingleQuote"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.EscapeString.ImpText(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="importString"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.EscapeString.OutputText(System.String,System.Boolean)">
+            <summary>
+            还原转义字符
+            </summary>
+            <param name="outputString"></param>
+            <param name="bIsToConvertSingleQuote"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.EscapeString.Turn(System.String,System.Int32)">
+            <summary>
+            标题省略
+            </summary>
+            <param name="strTitle"></param>
+            <param name="iMaxLen"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HNAS.Framework4.WebCommon.Function">
+            <summary>
+            工具类
+            </summary>
+            Copyright (c) 2012 海航航空信息系统有限公司
+            创 建 人：王宇
+            创建日期：2012-2-20
+            修 改 人：
+            修改日期：
+            版 本：1.0
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Function.BindDataToDDL(System.Web.UI.WebControls.DropDownList,System.Data.DataTable,System.String,System.String)">
+            <summary>
+            绑定数据到DropDownList
+            </summary>
+            <param name="ddl">DropDownList实例</param>
+            <param name="dt">数据源</param>
+            <param name="strTextField">条目</param>
+            <param name="strValueField">值</param>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Function.GridViewToExcel(System.Web.UI.WebControls.GridView,System.String,System.String,System.Web.UI.Page)">
+            <summary>
+            GridView导出到Excel
+            </summary>
+            <param name="gvBindData"></param>
+            <param name="strExcelName">文件名</param>
+            <param name="strCharset">编码类型</param>
+            <param name="page">默认当前页面</param>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Function.DTToExcel(System.Data.DataTable,System.String,System.String,System.String,System.Web.UI.Page)">
+            <summary>
+            DataTable导出Excel
+            </summary>
+            <param name="dtSource">数据源</param>
+            <param name="strColumnNames">列名</param>
+            <param name="strExcelName">文件名</param>
+            <param name="strCharset">编码类型</param>
+            <param name="page">默认当前页</param>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Function.EncryptMD5(System.String)">
+            <summary>
+            密码MD5加密
+            </summary>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Function.GetIP">
+            <summary>
+            获取IP地址
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Function.GetRandom">
+            <summary>
+            获取随机字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Function.GetRandomString(System.Int32)">
+            <summary>
+            获取指定长度的随机字符串
+            </summary>
+            <param name="iLength"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Function.IsContainChinese(System.String)">
+            <summary>
+            是否有中文字符
+            </summary>
+            <param name="strText"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Function.SendEMail(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            发送邮件
+            </summary>
+            <param name="mailto">收件人</param>
+            <param name="subject">标题</param>
+            <param name="body">内容</param>
+            <param name="mailcc">抄送</param>
+            <param name="strAttachFilePath">附件路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Function.DistinctDataTable(System.Data.DataTable,System.String[],System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="dtSource"></param>
+            <param name="strColumnsName"></param>
+            <param name="bIsDistinct"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Function.TableIntersection(System.Data.DataTable,System.Data.DataTable)">
+            <summary>
+            合并DataTable
+            </summary>
+            <param name="dtAll"></param>
+            <param name="dtValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Function.ToWeekDay(System.DateTime)">
+            <summary>
+            返回星期几
+            </summary>
+            <param name="dtDate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Function.ToWeekDay(System.Int32,System.Boolean)">
+            <summary>
+            返回星期几
+            </summary>
+            <param name="iNum"></param>
+            <param name="bInternational"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HNAS.Framework4.WebCommon.GenericTemplateControl">
+            <summary>
+            通用控件模板
+            </summary>
+            Copyright (c) 2012 海航航空信息系统有限公司
+            创 建 人：王宇
+            创建日期：2012-2-20
+            修 改 人：
+            修改日期：
+            版 本：1.0
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.GenericTemplateControl.AttachChildControl">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.GenericTemplateControl.CreateChildControls">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.GenericTemplateControl.DataBind">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.GenericTemplateControl.FindControl(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.GenericTemplateControl.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="P:HNAS.Framework4.WebCommon.GenericTemplateControl.ClientID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.WebCommon.GenericTemplateControl.Controls">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.WebCommon.GenericTemplateControl.Skin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HNAS.Framework4.WebCommon.GridViewPager">
+            <summary>
+            Gridview分页控件
+            </summary>
+            Copyright (c) 2012 海航航空信息系统有限公司
+            创 建 人：王宇
+            创建日期：2012-2-20
+            修 改 人：
+            修改日期：
+            版 本：1.0
+        </member>
+        <member name="F:HNAS.Framework4.WebCommon.GridViewPager.CurrentIndexHolderID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.WebCommon.GridViewPager.EventPageIndexChanging">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.WebCommon.GridViewPager.FirstPageLinkID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.WebCommon.GridViewPager.LastPageLinkID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.WebCommon.GridViewPager.NextPageLinkID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.WebCommon.GridViewPager.PageCountHolderID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.WebCommon.GridViewPager.PageItemCountID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.WebCommon.GridViewPager.PageSelectorID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.WebCommon.GridViewPager.PrevPageLinkID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HNAS.Framework4.WebCommon.GridViewPager.TotalCountID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.GridViewPager.AttachChildControl">
+            <summary>
+            增加子控件
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.GridViewPager.DataBind">
+            <summary>
+            数据绑定
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.GridViewPager.OnInit(System.EventArgs)">
+            <summary>
+            初始化
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.GridViewPager.OnPageIndexChanging(System.Int32)">
+            <summary>
+            翻页事件
+            </summary>
+            <param name="newIndex"></param>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.GridViewPager.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="E:HNAS.Framework4.WebCommon.GridViewPager.PageIndexChanging">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.WebCommon.GridViewPager.DataSource">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.WebCommon.GridViewPager.ItemsCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.WebCommon.GridViewPager.PageCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.WebCommon.GridViewPager.PageIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.WebCommon.GridViewPager.PageSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.WebCommon.GridViewPager.ViewID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HNAS.Framework4.WebCommon.UIBase">
+            <summary>
+            页面基类
+            </summary>
+            Copyright (c) 2011 海航航空信息系统有限公司
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+            版 本：1.0
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.UIBase.CreateTitle(System.Web.UI.WebControls.GridView,System.Boolean)">
+            <summary>
+             gridview显示title的方法
+            </summary>
+            Copyright (c) 
+            创 建 人：王好(hao-wang@hnair.net)
+            创建日期：2012年2月1日
+            修 改 人：王好
+            修改日期：
+            版 本: 
+            <param name="gv"></param>
+            <param name="flag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.UIBase.GetObjValueByTextBox(System.Object,System.String)">
+            <summary>
+            获取对象的新值
+            </summary>
+            Copyright (c) 
+            创 建 人：王好(hao-wang@hnair.net)
+            创建日期：2012年2月1日
+            修 改 人：王好
+            修改日期：
+            版 本:
+            <param name="obj"></param>
+            <param name="controlsPrefix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.UIBase.GetPropertyInfoTypeValue(System.Reflection.PropertyInfo,System.String)">
+            <summary>
+            根据PropertyInfoType 动态转换strValue
+            </summary>
+            <param name="info"></param>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.UIBase.ToType(System.Type,System.String)">
+            <summary>
+            将字符串动态转换为指定的值类型 
+            </summary>
+            Copyright (c) 
+            创 建 人：王好(hao-wang@hnair.net)
+            创建日期：2012年2月1日
+            修 改 人：王好
+            修改日期：
+            版 本:
+            <param name="type"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.UIBase.SetTxbValue(System.Object,System.String)">
+            <summary>
+            给textbox赋值
+            </summary>
+            Copyright (c) 
+            创 建 人：王好(hao-wang@hnair.net)
+            创建日期：2012年2月1日
+            修 改 人：王好
+            修改日期：
+            版 本: 
+            <param name="obj"></param>
+            <param name="controlsPrefix"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.UIBase.GetPrimaryKeyValue(System.Object,System.Web.UI.WebControls.GridView,System.Int32,System.String)">
+            <summary>
+            根据gridview所选行给主键赋初值
+            </summary>
+            Copyright (c) 
+            创 建 人：王好(hao-wang@hnair.net)
+            创建日期：2012年2月1日
+            修 改 人：王好
+            修改日期：
+            版 本: 
+            <param name="obj">对象</param>
+            <param name="gv">gridvew</param>
+            <param name="rowIndex">所选行</param>
+            <param name="enabledctlPrefix">是否需要对主键不可更改，默认为空不可更改</param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.UIBase.BindPagerCustomInfoHTML(Wuqi.Webdiyer.AspNetPager)">
+            <summary>
+            Bind Pager CustomInfoHtml
+            </summary>
+            Copyright (c) 
+            创 建 人：王好(hao-wang@hnair.net)
+            创建日期：2012年2月1日
+            修 改 人：王好
+            修改日期：
+            版 本:
+            <param name="aspNetPager"></param>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.UIBase.GridViewRowsChangeColor(System.Object,System.Web.UI.WebControls.GridViewRowEventArgs)">
+            <summary>
+            鼠标悬停高亮显示
+            </summary>
+            Copyright (c) 
+            创 建 人：王好(hao-wang@hnair.net)
+            创建日期：2012年2月1日
+            修 改 人：王好
+            修改日期：
+            版 本: 
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.UIBase.RegisterScript(System.String,System.String)">
+            <summary>
+            注册脚本
+            </summary>
+            <param name="script"></param>
+            <param name="key"></param>
+        </member>
+        <member name="P:HNAS.Framework4.WebCommon.UIBase.IsLogin">
+            <summary>
+            登录状态
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.WebCommon.UIBase.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.WebCommon.UIBase.IsAdmin">
+            <summary>
+            是否为管理员
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.WebCommon.UIBase.WebPath">
+            <summary>
+            获取网站根目录
+            </summary>
+            Copyright   
+            创 建 人：王好(hao-wang@hnair.net)
+            创建日期：2012年5月28日
+            修 改 人：王好
+            修改日期：
+            版 本:      
+        </member>
+        <member name="T:HNAS.Framework4.WebCommon.Validation">
+            <summary>
+            验证类
+            </summary>
+            Copyright (c) 2012 海航航空信息系统有限公司
+            创 建 人：王宇
+            创建日期：2012-2-20
+            修 改 人：
+            修改日期：
+            版 本：1.0
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Validation.CheckAccount(System.String,System.String)">
+            <summary>
+            账号验证
+            </summary>
+            <param name="strValue">账号</param>
+            <param name="strAlertMessage">提示信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Validation.CheckEmail(System.String)">
+            <summary>
+            Email验证
+            </summary>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Validation.CheckInteger(System.String)">
+            <summary>
+            整数验证
+            </summary>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Validation.CheckIntegerAndLetter(System.String)">
+            <summary>
+            数字字母验证
+            </summary>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Validation.CheckIsFloat(System.String,System.String)">
+            <summary>
+            实数验证
+            </summary>
+            <param name="strValue"></param>
+            <param name="strAlertMessage">提示信息，可为空</param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Validation.CheckIsInteger(System.String)">
+            <summary>
+            正整数
+            </summary>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Validation.CheckIsNumber(System.String,System.String)">
+            <summary>
+            数字验证
+            </summary>
+            <param name="strValue"></param>
+            <param name="strAlertMessage">提示信息，可为空</param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Validation.CheckIsUnsignedFloat(System.String,System.String)">
+            <summary>
+            非负实数验证
+            </summary>
+            <param name="strValue"></param>
+            <param name="strAlertMessage">提示信息，可为空</param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Validation.CheckIsUnsignedInteger(System.String,System.String)">
+            <summary>
+            正整数验证
+            </summary>
+            <param name="strValue"></param>
+            <param name="strAlertMessage">提示信息，可为空</param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Validation.CheckLength(System.String,System.Int32,System.String)">
+            <summary>
+            长度验证
+            </summary>
+            <param name="strValue"></param>
+            <param name="iMax">最大长度</param>
+            <param name="strAlertMessage">提示信息，可为空</param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Validation.CheckMobile(System.String)">
+            <summary>
+            手机号验证
+            </summary>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Validation.CheckNull(System.String,System.String)">
+            <summary>
+            非空验证
+            </summary>
+            <param name="strValue"></param>
+            <param name="strAlertMessage">提示信息，可为空</param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Validation.CheckPhone(System.String)">
+            <summary>
+            电话号码验证
+            </summary>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.Validation.CheckPostCode(System.String)">
+            <summary>
+            邮政编码验证
+            </summary>
+            <param name="strValue"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HNAS.Framework4.WebCommon.XmlHelper">
+            <summary>
+            XML操作类
+            </summary>
+            Copyright (c) 2012 海航航空信息系统有限公司
+            创 建 人：王宇
+            创建日期：2012-2-20
+            修 改 人：
+            修改日期：
+            版 本：1.0
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.XmlHelper.Read(System.String,System.String,System.String)">
+            <summary>
+            读取数据
+            </summary>
+            <param name="path">路径</param>
+            <param name="node">节点</param>
+            <param name="attribute">属性名，非空时返回该属性值，否则返回串联值</param>
+            <returns>string</returns>
+            <remarks>
+            使用示列:
+            XmlHelper.Read(path, "/Node", "")
+            XmlHelper.Read(path, "/Node/Element[@Attribute='Name']", "Attribute")
+            </remarks>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.XmlHelper.Insert(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            插入数据
+            </summary>
+            <param name="path">路径</param>
+            <param name="node">节点</param>
+            <param name="element">元素名，非空时插入新元素，否则在该元素中插入属性</param>
+            <param name="attribute">属性名，非空时插入该元素属性值，否则插入元素值</param>
+            <param name="value">值</param>
+            <returns></returns>
+            <remarks>
+            使用示列:
+            XmlHelper.Insert(path, "/Node", "Element", "", "Value")
+            XmlHelper.Insert(path, "/Node", "Element", "Attribute", "Value")
+            XmlHelper.Insert(path, "/Node", "", "Attribute", "Value")
+            </remarks>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.XmlHelper.Update(System.String,System.String,System.String,System.String)">
+            <summary>
+            修改数据
+            </summary>
+            <param name="path">路径</param>
+            <param name="node">节点</param>
+            <param name="attribute">属性名，非空时修改该节点属性值，否则修改节点值</param>
+            <param name="value">值</param>
+            <returns></returns>
+            <remarks>
+            使用示列:
+            XmlHelper.Insert(path, "/Node", "", "Value")
+            XmlHelper.Insert(path, "/Node", "Attribute", "Value")
+            </remarks>
+        </member>
+        <member name="M:HNAS.Framework4.WebCommon.XmlHelper.Delete(System.String,System.String,System.String)">
+            <summary>
+            删除数据
+            </summary>
+            <param name="path">路径</param>
+            <param name="node">节点</param>
+            <param name="attribute">属性名，非空时删除该节点属性值，否则删除节点值</param>
+            <returns></returns>
+            <remarks>
+            使用示列:
+            XmlHelper.Delete(path, "/Node", "")
+            XmlHelper.Delete(path, "/Node", "Attribute")
+            </remarks>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,957 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HNAS.Framework4.Data</name>
+    </assembly>
+    <members>
+        <member name="T:HNAS.Framework4.Data.CommonDA">
+            <summary>
+            DataAccess层通用实现
+            </summary>
+            Copyright (c) 2011 海南海航航空信息系统有限公司
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+            版 本：1.0
+        </member>
+        <member name="T:HNAS.Framework4.Data.DABase">
+            <summary>
+            DataAccess层基类
+            </summary>
+            Copyright (c) 2011 海航航空信息系统有限公司
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+            版 本：1.0
+        </member>
+        <member name="M:HNAS.Framework4.Data.DABase.#ctor(System.String,HNAS.Framework4.Data.DataAccess)">
+            <summary>
+            构造函数，创建数据库实例
+            </summary>
+            <param name="strDBName">数据库连接配置名</param>
+            <param name="dataAccess">数据访问接口</param>
+        </member>
+        <member name="P:HNAS.Framework4.Data.DABase.DataAccess">
+            <summary>
+            数据访问接口
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.#ctor(System.String,HNAS.Framework4.Data.DataAccess)">
+            <summary>
+            构造函数，创建数据库实例
+            </summary>
+            <param name="strDBName">数据库连接配置名</param>
+            <param name="dataAccess">数据访问接口（外部事务调用）</param>
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.GetTableName``1(``0)">
+            <summary>
+            获取表名
+            </summary>
+            <returns>表名</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.GetPrimaryKey``1(``0)">
+            <summary>
+            获取主键值
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <returns>返回主键值</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2012-10-22
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.GetOne``1(``0)">
+            <summary>
+            精确查询，获取数据返回第一个
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <returns>数据实体</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.GetList``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            获取数据返回List
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存；默认不缓存</param>
+            <param name="strCacheKey">缓存名称，默认为表名</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <param name="bAccurate">默认精确查询，false为模糊查询</param>
+            <returns>返回泛型列表</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.GetDataSet``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            获取数据返回DataSet
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存；默认不缓存</param>
+            <param name="strCacheKey">缓存名称，默认为表名</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <param name="bAccurate">默认精确查询，false为模糊查询</param>
+            <returns>返回DataSet</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.GetDataReader``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            获取数据返回DataReader
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存；默认不缓存</param>
+            <param name="strCacheKey">缓存名称，默认为表名</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <param name="bAccurate">默认精确查询，false为模糊查询</param>
+            <returns>返回DataReader</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.GetDataTable``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            获取数据返回DataTable
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存；默认不缓存</param>
+            <param name="strCacheKey">缓存名称，默认为表名</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <param name="bAccurate">默认精确查询，false为模糊查询</param>
+            <returns>返回DataTable</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.GetList``1(``0,HNAS.Framework4.Data.Pager@,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            获取数据返回List（支持分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存；默认不缓存</param>
+            <param name="strCacheKey">缓存名称，默认为表名</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <param name="bAccurate">默认精确查询，false为模糊查询</param>
+            <returns>返回泛型列表</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.GetDataSet``1(``0,HNAS.Framework4.Data.Pager@,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            获取数据返回DataSet（支持分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存；默认不缓存</param>
+            <param name="strCacheKey">缓存名称，默认为表名</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <param name="bAccurate">默认精确查询，false为模糊查询</param>
+            <returns>返回DataSet</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.GetDataReader``1(``0,HNAS.Framework4.Data.Pager@,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            获取数据返回DataReader（支持分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存；默认不缓存</param>
+            <param name="strCacheKey">缓存名称，默认为表名</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <param name="bAccurate">默认精确查询，false为模糊查询</param>
+            <returns>返回DataReader</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.GetDataTable``1(``0,HNAS.Framework4.Data.Pager@,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter},System.Boolean)">
+            <summary>
+            获取数据返回DataTable（支持分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存；默认不缓存</param>
+            <param name="strCacheKey">缓存名称，默认为表名</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <param name="bAccurate">默认精确查询，false为模糊查询</param>
+            <returns>返回DataTable</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.GetOneByLike``1(``0)">
+            <summary>
+            模糊查询，获取数据返回第一个
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <returns>数据实体</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.GetListByLike``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            模糊查询，获取数据返回List
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存；默认不缓存</param>
+            <param name="strCacheKey">缓存名称，默认为表名</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回泛型列表</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.GetDataSetByLike``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            模糊查询，获取数据返回DataSet
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存；默认不缓存</param>
+            <param name="strCacheKey">缓存名称，默认为表名</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回DataSet</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.GetDataReaderByLike``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            模糊查询，获取数据返回DataReader
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存；默认不缓存</param>
+            <param name="strCacheKey">缓存名称，默认为表名</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回DataReader</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.GetDataTableByLike``1(``0,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            模糊查询，获取数据返回DataTable
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存；默认不缓存</param>
+            <param name="strCacheKey">缓存名称，默认为表名</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回DataTable</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.GetListByLike``1(``0,HNAS.Framework4.Data.Pager@,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            模糊查询，获取数据返回List（分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存；默认不缓存</param>
+            <param name="strCacheKey">缓存名称，默认为表名</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回泛型列表</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.GetDataSetByLike``1(``0,HNAS.Framework4.Data.Pager@,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            模糊查询，获取数据返回DataSet（分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存；默认不缓存</param>
+            <param name="strCacheKey">缓存名称，默认为表名</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回DataSet</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.GetDataReaderByLike``1(``0,HNAS.Framework4.Data.Pager@,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            模糊查询，获取数据返回DataReader（分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存；默认不缓存</param>
+            <param name="strCacheKey">缓存名称，默认为表名</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回DataReader</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.GetDataTableByLike``1(``0,HNAS.Framework4.Data.Pager@,System.Boolean,System.String,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            模糊查询，获取数据返回DataTable（分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="bCache">true 启用缓存; false 禁用缓存；默认不缓存</param>
+            <param name="strCacheKey">缓存名称，默认为表名</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回DataTable</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.Add``1(``0)">
+            <summary>
+            添加数据，返回主键
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <returns>主键</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.AddReturnBool``1(``0)">
+            <summary>
+            添加数据，返回bool
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <returns>返回操作成功与否</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.Add``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            批量添加数据
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="modelList">数据实体集合</param>
+            <returns>返回操作成功与否</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.Update``1(``0,System.Data.Common.DbParameter[])">
+            <summary>
+            更新记录 （默认更新条件为主键）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="conditionParameters">条件参数，参数名称请与数据库列名一致</param>
+            <returns>返回操作成功与否</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.Update``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            批量更新数据（默认更新条件为主键）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="modelList">数据实体集合</param>
+            <returns>返回操作成功与否</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.Update``1(System.Collections.Generic.Dictionary{``0,System.Data.Common.DbParameter[]})">
+            <summary>
+            批量更新数据（自定义条件更新）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="dicModel_Parameter">数据实体、更新条件键值集合</param>
+            <returns>返回操作成功与否</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.Delete``1(``0,System.Data.Common.DbParameter[])">
+            <summary>
+            删除数据（默认删除条件为主键）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="conditionParameters">条件参数，参数名称请与数据库列名一致</param>
+            <returns>返回操作成功与否</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.Delete``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            批量删除数据
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="modelList">数据实体集合</param>
+            <returns>返回操作成功与否</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.CommonDA.Delete``1(System.Collections.Generic.Dictionary{``0,System.Data.Common.DbParameter[]})">
+            <summary>
+            批量删除数据（自定义条件删除）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="dicModel_Parameter">数据实体、更新条件键值集合</param>
+            <returns>返回操作成功与否</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="T:HNAS.Framework4.Data.DataAccess">
+            <summary>
+            数据库操作类
+            </summary>
+             创 建 人：余鹏飞
+             创建日期：2011年12月14日
+             修 改 人：王宇
+             修改日期：2012年2月24日
+             Copyright (c) 2012 海南海航航空信息系统有限公司
+             版 本：1.0	
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.#ctor(System.String)">
+            <summary>
+            构造函数，创建数据库实例
+            </summary>
+            <param name="strDBName">数据库连接配置名</param>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.GetDefaultConnect">
+            <summary>
+            获取默认数据库连接字符串
+            </summary>
+            <returns>默认数据库连接字符串</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.GetList``1(``0,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            查询
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>100"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回泛型列表</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.GetDataSet``1(``0,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            查询
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>100"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回DataSet</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.GetDataReader``1(``0,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            查询
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>100"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回DataReader</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.GetDataTable``1(``0,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            查询
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>100"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回DataTable</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.GetList``1(``0,HNAS.Framework4.Data.Pager@,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            查询（支持分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>100"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回泛型列表</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.GetDataSet``1(``0,HNAS.Framework4.Data.Pager@,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            查询（支持分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>100"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回DataSet</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.GetDataReader``1(``0,HNAS.Framework4.Data.Pager@,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            查询（支持分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>100"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回DataReader</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.GetDataTable``1(``0,HNAS.Framework4.Data.Pager@,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            查询（支持分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>100"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回DataTable</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.GetListByLike``1(``0,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            模糊查询
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>100"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回泛型列表</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.GetDataSetByLike``1(``0,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            模糊查询
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>100"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回DataSet</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.GetDataReaderByLike``1(``0,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            模糊查询
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回DataReader</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.GetDataTableByLike``1(``0,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            模糊查询
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回DataTable</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.GetListByLike``1(``0,HNAS.Framework4.Data.Pager@,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            模糊查询（支持分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回泛型列表</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.GetDataSetByLike``1(``0,HNAS.Framework4.Data.Pager@,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            模糊查询（支持分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回DataSet</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.GetDataReaderByLike``1(``0,HNAS.Framework4.Data.Pager@,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            模糊查询（支持分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回DataReader</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.GetDataTableByLike``1(``0,HNAS.Framework4.Data.Pager@,System.String,System.String,System.String,System.Collections.Generic.List{System.Data.Common.DbParameter})">
+            <summary>
+            模糊查询（支持分页）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="pager">分页实体</param>
+            <param name="strOrderBy">排序参数，只传入ORDER BY后面的排序值</param>
+            <param name="strColumnFilter">列过滤参数，只传入SELECT和FROM之间的SQL语句</param>
+            <param name="strRowFilter">行过滤参数，只传入"WHERE 1=1"后的SQL语句，如" AND cniID>@ID"</param>
+            <param name="parameters">自定义参数</param>
+            <returns>返回DataTable</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.Add``1(``0)">
+            <summary>
+            添加数据，返回主键
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <returns>返回主键值</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.AddList``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            批量添加，需要事务处理
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="modelList">数据实体集合</param>
+            <returns>返回操作成功与否</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.AddReturnBool``1(``0)">
+            <summary>
+            添加数据返回bool
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <returns>返回操作成功与否</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.AddListNew``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            批量添加，需要事务处理
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="modelList">数据实体集合</param>
+            <returns>返回操作成功与否</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.Update``1(``0,System.Data.Common.DbParameter[])">
+            <summary>
+            更新记录 （默认更新条件为主键）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="conditionParameters">条件参数，参数名称请与数据库列名一致</param>
+            <returns>返回操作成功与否</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.UpdateList``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            批量更新（默认更新条件为主键）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="modelList">数据实体集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.UpdateList``1(System.Collections.Generic.Dictionary{``0,System.Data.Common.DbParameter[]})">
+            <summary>
+            批量更新（自定义条件更新）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="dicModel_Parameter">数据实体、更新条件键值集合</param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.GetPrimaryKey``1(``0)">
+            <summary>
+            获取主键值
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <returns>返回主键名称，值</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.Delete``1(``0,System.Data.Common.DbParameter[])">
+            <summary>
+            删除数据（默认删除条件为主键）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="conditionParameters">条件参数，参数名称请与数据库列名一致</param>
+            <returns>返回操作成功与否</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.DeleteList``1(System.Collections.Generic.IList{``0})">
+            <summary>
+            批量删除（默认删除条件为主键）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="modelList">数据实体集合</param>
+            <returns>返回操作成功与否</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.DeleteList``1(System.Collections.Generic.Dictionary{``0,System.Data.Common.DbParameter[]})">
+            <summary>
+            批量删除（自定义条件删除）
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="dicModel_Parameter">数据实体、更新条件键值集合</param>
+            <returns>返回操作成功与否</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.GetTableName``1(``0)">
+            <summary>
+            获取表名
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <returns>表名</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.WhereStatmentBuilder``1(``0,System.Data.Common.DbCommand@,System.String@,System.Collections.ArrayList@,System.String@,System.Boolean)">
+            <summary>
+            组装SQL
+            </summary>
+            <param name="t">实体对象</param>
+            <param name="dcmd">DbCommand对象</param>
+            <param name="whereSql">查询条件语句</param>
+            <param name="columnNameList">数据库列名列表</param>
+            <param name="primaryKey">主键列，逗号分隔</param>
+            <param name="fuzzyQuery">模糊查询标记</param>
+            <remarks></remarks>
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.IfColumnValid(System.String[],System.Collections.ArrayList)">
+            <summary>
+            列过滤参数判断
+            </summary>
+            <param name="strColumnFilter">列过滤条件</param>
+            <param name="alColumn">所有列集合</param>
+            <returns></returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.NeedFuzzy(System.String)">
+            <summary>
+            判断数据类型是否需要模糊查询
+            </summary>
+            <param name="strDbType">数据类型</param>
+            <returns>是否需要模糊查询</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.ConvertToEntity``1(``0,System.Data.DataRow)">
+            <summary>
+            转换实体并赋值
+            </summary>
+            <typeparam name="T">数据实体类型</typeparam>
+            <param name="model">数据实体</param>
+            <param name="row"></param>
+            创 建 人：余鹏飞
+            创建日期：2011-12-5
+            修 改 人：王宇（wang_yu5）
+            修改日期：2012-2-17
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.GetDbType(System.String)">
+            <summary>
+            数据类型映射
+            </summary>
+            <param name="strDbType">数据库数据类型</param>
+            <returns>数据类型</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Data.DataAccess.IsOperator(System.String)">
+            <summary>
+            判断是否是比较操作符
+            </summary>
+            <param name="strOperator">比较操作符</param>
+            <returns>是否是比较操作符</returns>
+            创 建 人：王宇（wang_yu5）
+            创建日期：2012-2-17
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="P:HNAS.Framework4.Data.DataAccess.db">
+            <summary>
+            数据库实例
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Data.DataAccess.dbConnection">
+            <summary>
+            数据库连接
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Data.DataAccess.dbTransaction">
+            <summary>
+            数据库事务
+            </summary>
+        </member>
+        <member name="T:HNAS.Framework4.Data.Pager">
+            <summary>
+            分页类
+            </summary>
+             创 建 人：余鹏飞
+             创建日期：2011年12月14日
+             修 改 人：王宇
+             修改日期：2012年2月24日
+             Copyright (c) 2012 海南海航航空信息系统有限公司
+             版 本：1.0	
+        </member>
+        <member name="P:HNAS.Framework4.Data.Pager.Total">
+            <summary>
+            总条数
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Data.Pager.PageCount">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Data.Pager.PageSize">
+            <summary>
+            页大小
+            </summary>
+        </member>
+        <member name="P:HNAS.Framework4.Data.Pager.PageIndex">
+            <summary>
+            当前页
+            </summary>
+        </member>
+    </members>
+</doc>

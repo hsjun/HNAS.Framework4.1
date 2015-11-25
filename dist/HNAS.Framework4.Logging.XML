@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HNAS.Framework4.Logging</name>
+    </assembly>
+    <members>
+        <member name="T:HNAS.Framework4.Logging.CodeCommon">
+            <summary>
+            CodeCommon
+            </summary>
+            Copyright (c) 2012 海南海航航空信息系统有限公司
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2012-2-1
+            修 改 人：
+            修改日期：
+            版 本：1.0
+        </member>
+        <member name="F:HNAS.Framework4.Logging.CodeCommon.bMProNameRule">
+            <summary>
+            数据表字段的命名规则
+            </summary>
+        </member>
+        <member name="M:HNAS.Framework4.Logging.CodeCommon.GetPorName(System.String,System.String)">
+            <summary>
+            返回属性名
+            </summary>
+            <param name="colName"></param>
+            <param name="rule"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Logging.CodeCommon.GetFileMaster(System.String,System.String)">
+            <summary>
+            获取code格式
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Logging.CodeCommon.ToFirstLowerCase(System.String)">
+            <summary>
+            返回首字母小写
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Logging.CodeCommon.GetLoginName">
+            <summary>
+            获取AD帐号
+            </summary>
+            <returns>获取AD帐号</returns>
+            创 建 人：杨栋(dong_yang1)
+            创建日期：2011-12-30
+        </member>
+        <member name="M:HNAS.Framework4.Logging.CodeCommon.CopyDirectory(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="srcdir">源文件夹</param>
+            <param name="desdir">目的地文件夹</param>
+        </member>
+        <member name="M:HNAS.Framework4.Logging.CodeCommon.GetComment(System.String)">
+            <summary>
+            获得数据库说明中的展示部分
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HNAS.Framework4.Logging.CodeCommon.GetBetweenString(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            获取2个字符串之间的字符串
+            </summary>
+            <param name="str">源字符串</param>
+            <param name="beginTag">开始字符串</param>
+            <param name="endTag">截止字符串</param>
+            <param name="beginOffset">开始字符串偏移量</param>
+            <returns></returns>
+            创 建 人：HNAS .Net Framework 4.0 项目组
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Logging.CodeCommon.InputText(System.String,System.Int32)">
+            <summary>
+            Method to make sure that user's inputs are not malicious
+            </summary>
+            <param name="text">User's Input</param>
+            <param name="maxLength">Maximum length of input</param>
+            <returns>The cleaned up version of the input</returns>
+        </member>
+        <member name="M:HNAS.Framework4.Logging.CodeCommon.WriteCodeToFile(System.String,System.String,System.String,System.String)">
+            <summary>
+            WriteCodeToFile
+            </summary>
+            <param name="inputs"></param>
+            <param name="pathAndName"></param>
+            <param name="csFileName"></param>
+            <param name="fileType"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Logging.CodeCommon.CreateFile(System.String)">
+            <summary>
+            CreateFile
+            </summary>
+            <param name="pathAndName"></param>
+        </member>
+        <member name="M:HNAS.Framework4.Logging.CodeCommon.DbTypeToCS(System.String)">
+            <summary>
+            DbTypeToCS
+            </summary>
+            <param name="dbtype"></param>
+            <returns></returns>
+        </member>
+        <member name="T:HNAS.Framework4.Logging.WriteLogToDB">
+            <summary>
+            日志写入数据库
+            </summary>
+            创 建 人：胡鹏
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Logging.WriteLogToDB.WriteLog(System.String,System.String,System.Boolean)">
+            <summary>
+            写日志函数,将日志信息记录到数据库中
+            </summary>
+            <param name="strMessage">日志信息</param>
+            <param name="strOperatorName">操作人</param>
+            <param name="bOpen">日志开关</param>
+            创 建 人：胡鹏
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Logging.WriteLogToDB.CreateLogDB(System.String)">
+            <summary>
+            创建日志信息表到数据库中
+            </summary>
+            <param name="constr">数据库服务器</param>
+            创 建 人：胡鹏
+            创建日期：2012-11-28
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Logging.WriteLogToDB.ExecuteSqlFile(System.String)">
+            <summary>
+            读取.sql脚本文件
+            </summary>
+            <param name="varFileName">文件路径</param>
+            创 建 人：胡鹏
+            创建日期：2012-11-28
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="T:HNAS.Framework4.Logging.WriteType">
+            <summary>
+            日志类型
+            </summary>
+            创 建 人：胡鹏
+            创建日期：2011-12-5
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Logging.WriteType.CreateDBLog">
+            <summary>
+            写数据库
+            </summary>
+            创 建 人：胡鹏
+            创建日期：2012-11-28
+            修 改 人：
+            修改日期：
+        </member>
+        <member name="M:HNAS.Framework4.Logging.WriteType.CreateTxtLog">
+            <summary>
+            写文本
+            </summary>
+            创 建 人：胡鹏
+            创建日期：2012-11-28
+            修 改 人：
+            修改日期：
+        </member>
+    </members>
+</doc>
